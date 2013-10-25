@@ -21,6 +21,7 @@ def check_arguments():
 def get_unique_input_licenses(infile_name):
     csvreader = csv.reader(open(infile_name))
     input_licenses = []
+    header = csvreader.next()
     for row in csvreader:
 	ds_key, license = row
 	if not license in input_licenses:
