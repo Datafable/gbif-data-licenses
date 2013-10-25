@@ -1,14 +1,15 @@
 #!/usr/bin/python
 import requests
 import json
-import ast
+import csv
+import sys
 
 def parse_dataset_metadata(dataset):
     if 'rights' in dataset.keys():
 	rights = dataset['rights']
     else:
 	rights = 'not supplied'
-    return {'dataset_key': dataset['key'], 'rights': rights}
+    return [dataset['key'].encode('utf-8'), rights.encode('utf-8')]
 
 def get_gbif_datasets(limit, offset):
     params = {'limit': limit, 'offset': offset}
@@ -20,10 +21,12 @@ results = []
 more_results_to_find = True
 offset = 0
 limit = 20
+print '"#dataset-key","rights"'
+csvwriter = csv.writer(sys.stdout)
 while more_results_to_find:
     datasets = get_gbif_datasets(limit, offset)
     for dataset in datasets:
-	print parse_dataset_metadata(dataset)
+	csvwriter.writerow(parse_dataset_metadata(dataset))
     offset += 20
     if len(datasets) == 0:
 	more_results_to_find = False
