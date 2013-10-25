@@ -6,7 +6,8 @@ import sys
 
 def parse_dataset_metadata(dataset):
     if 'rights' in dataset.keys():
-	rights = dataset['rights']
+	rights = dataset['rights'].strip()
+	rights = rights.replace("\n", "")
     else:
 	rights = 'not supplied'
     return [dataset['key'].encode('utf-8'), rights.encode('utf-8')]
