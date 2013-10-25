@@ -6,11 +6,11 @@ import sys
 
 def parse_dataset_metadata(dataset):
     if 'rights' in dataset.keys():
-	rights = dataset['rights'].strip()
+	rights = dataset['rights'].encode('utf-8').strip()
 	rights = rights.replace("\n", "")
     else:
 	rights = 'not supplied'
-    return [dataset['key'].encode('utf-8'), rights.encode('utf-8')]
+    return [dataset['key'].encode('utf-8'), rights]
 
 def get_gbif_datasets(limit, offset):
     params = {'limit': limit, 'offset': offset}
