@@ -22,6 +22,12 @@ We want to get an overview of all data licenses used in GBIF registered datasets
 
 This command will fetch all metadata from GBIF datasets and parse the dataset code and rights from it. The output will be written to the data folder.
 
+### Add new licenses to the licenses file
+
+`make data/licenses.mkd`
+
+This command will run the `unique_licenses.py` script. It will fetch the metadata from the `data/datasets.csv` file, look for licenses that were not documented in `data/licenses.mkd` yet, and append these to the file. If the file `data/licenses.mkd` does not exist, it will be created.
+
 ## Requirements
 
 - Unix make
