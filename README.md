@@ -12,3 +12,18 @@ We want to get an overview of all data licenses used in GBIF registered datasets
 ## Contents
 
 * [code](./code): This directory contains code we wrote in order to fetch all data licenses
+* [data](./data): This directory contains the output of the scripts. The files in this folder are the result of running the scripts in the `code` folder and/or manual annotation. Use `blame` to find out when they were generated or edited.
+
+## How to run the code
+
+### Fetch all datasets metadata from GBIF
+
+`make data/datasets.csv`
+
+This command will fetch all metadata from GBIF datasets and parse the dataset code and rights from it. The output will be written to the data folder.
+
+## Requirements
+
+- Unix make
+- Python
+- Python modules: requests
