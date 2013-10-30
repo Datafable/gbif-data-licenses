@@ -1,9 +1,9 @@
 standard license,use,distribution,commercial,derivatives,attribution,share alike,contact needed,number of datasets,license
-,,,,,,,,,not supplied
-,,,,,,,,,The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
-,,,,,,,,,"Esta [Chiropteros en el Parque Natural Regional El Vínculo y su zona de amortiguación (Buga, Valle del Cauca)] se hace disponible bajo la licencia Open Data Commons Attribution: http://www.opendatacommons.org/licenses/by/1.0/"
-,,,,,,,,,Este trabajo está bajo una licencia Creative Commons Zero (CC0) 1.0  http://creativecommons.org/publicdomain/zero/1.0/legalcode
-,,,,,,,,,http://creativecommons.org/publicdomain/zero/1.0/ & http://www.canadensys.net/norms
+false,?,?,?,?,?,?,true,,not supplied
+false,true,true,false,true,false,?,false,,The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
+true,true,true,true,true,true,false,false,,"Esta [Chiropteros en el Parque Natural Regional El Vínculo y su zona de amortiguación (Buga, Valle del Cauca)] se hace disponible bajo la licencia Open Data Commons Attribution: http://www.opendatacommons.org/licenses/by/1.0/"
+true,true,true,true,true,false,false,false,,Este trabajo está bajo una licencia Creative Commons Zero (CC0) 1.0  http://creativecommons.org/publicdomain/zero/1.0/legalcode
+true,true,true,true,true,false,false,false,,http://creativecommons.org/publicdomain/zero/1.0/ & http://www.canadensys.net/norms
 ,,,,,,,,,Terms of use Ghana Herbarium data: all rights on this data file belong to the University of Ghana / Ghana Herbarium. Please contact the Herbarium data manager before secondary usage of data in electronic or printed form.
 ,,,,,,,,,Esta [Listado de las Arañas de Colombia (Arachnida: Araneae)] se hace disponible bajo la licencia Open Data Commons Attribution: http://www.opendatacommons.org/licenses/by/1.0/
 ,,,,,,,,,This work is licensed under a Creative Commons CCZero 1.0 License http://creativecommons.org/publicdomain/zero/1.0/legalcode
