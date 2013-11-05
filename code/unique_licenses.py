@@ -32,14 +32,12 @@ def get_unique_input_licenses(infile_name):
 def get_known_licenses(outfile_name):
     known_licenses = []
     if os.path.exists(outfile_name):
-	mdreader = open(outfile_name)
-	table_header = mdreader.next()
-	table_dashes = mdreader.next()
-	for license_line in mdreader:
-	    match = re.findall('\|[^\|]+\|', license_line)[0]
-	    license = match.replace('|', '')
-	    known_licenses.append(license)
-	mdreader.close()
+	with open(outfile_name) as f:
+	    csvreader = csv.reader(f)
+	    table_header = csvreader.next()
+	    for license_line in csvreader:
+		license = license_line[8]
+		known_licenses.append(license)
     return known_licenses
 
 def find_new_licenses(in_licenses, known_licenses):
@@ -50,16 +48,15 @@ def find_new_licenses(in_licenses, known_licenses):
     return new_licenses
 
 def write_outfile_header(outfile_name):
-    writer = open(outfile_name, 'w')
-    writer.write('|license|attr1|attr2|attr3|\n')
-    writer.write('|-------|-----|-----|-----|\n')
-    writer.close()
+    with open(outfile_name, 'w') as f:
+	writer = csv.writer(f, lineterminator='\n')
+	writer.writerow(['standard license','use','distribution','derivatives','commercial','attribution','share alike','notification','license'])
 
 def append_licenses(licenses_to_append, outfile_name):
-    outwriter = open(outfile_name, 'a')
-    for license in licenses_to_append:
-	outwriter.write('|{0}|[ ]|[ ]|[ ]|\n'.format(license))
-    outwriter.close()
+    with open(outfile_name, 'a') as f:
+	outwriter = csv.writer(f, lineterminator='\n')
+	for license in licenses_to_append:
+	    outwriter.writerow(['','','','','','','','',license])
 
 def main():
     infile_name, outfile_name = check_arguments()
