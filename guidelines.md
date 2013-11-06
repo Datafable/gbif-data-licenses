@@ -7,7 +7,7 @@ The licenses are interpreted using the following parameters, which can be set to
 * is a `standard license`?
 * data `use` allowed?
 * data (re)`distribution` allowed?
-* `derivatives` allowed?
+* Creating `derivatives` allowed?
 * `commercial` use allowed?
 * `attribution` required?
 * `share alike` required?
@@ -56,16 +56,18 @@ Data use is interpreted as false if all rights are reserved or if use (without c
 > * These data are Copyright by the California Academy of Sciences, with all rights reserved.
 > * Data may not be used without permissionContact info@mantamatcher.org
 > * Terms of use Ghana Herbarium data: all rights on this data file belong to the University of Ghana / Ghana Herbarium. Please contact the Herbarium data manager before secondary usage of data in electronic or printed form.
-> * Not to use data contained in OBIS-SEAMAP in any publication without the written consent of the original data provider.
 
 ### Unclear
 
-Data use is interpreted as unclear if it is only allowed for parts of the data.
+Data use is interpreted as unclear if it is only allowed for parts of the data or if the scope of the use is unclear.
 
 > * Data records made available from Tiira Bird Observation System for the GBIF Data Portal may be used by individual researchers or research groups for scientific non-commercial purposes only. […] If this data **comprises an essential part of the work**, a priori consent must be obtained, and the possibility of joint work negotiated. Any other purposes of use are forbidden in any form without the explicit written consent of BirdLife Finland. […] BirdLife Finland has the right of use to these data records.
 > * […] Except as otherwise expressly stated herein, material from the Databases may not be reproduced, distributed, publicly displayed or otherwise used , in whole or in part, without the express written permission of the Academy.Subsets of the records in one or more of the Databases may be used, downloaded, reproduced, publicly displayed, distributed or reprinted by persons affiliated with academic and/or non-profit organizations for scientific and scholarly purposes only, provided however, that the following attribution appears in all copies: "Information provided with the permission of The Academy of Natural Sciences, Philadelphia, PA." Nevertheless, the Academy does not grant permission for anyone to use, download, reproduce, publicly display, distribute or reprint **all or substantially all** of the records in one or more of the Databases. […]
+> * […] Not to use data contained in OBIS-SEAMAP **in any publication** without the written consent of the original data provider. […]
 
 ## Distribution
+
+Data distribution is interpreted as a kind of use.
 
 ### True
 
@@ -80,10 +82,11 @@ Data distribution is interpreted as true for all standard licenses, if no restri
 
 ### False
 
-Data distribution is interpreted as false if it is explicitly forbidden or if use is set to false.
+Data distribution is interpreted as false if it is explicitly forbidden, if all rights are reserved, or if use is set to false.
 
 > * Release with permission of the appropriate parties.
 > * Oregon State University data records may be used by individual researchers or research groups, but they **may not be** repackaged, resold, or **redistributed** in any form without the express written consent of a curator of the appropriate collection. […]
+> * Data are provided for personal research only. Data may not be used for any commercial purposes. Data **may not be transferred** to another database for distribution to others without prior, written permission from the Canadian Museum of Nature.
 
 ### Unclear
 
@@ -93,11 +96,23 @@ Data distribution is interpreted as unclear if use is unclear or if there are co
 
 ## Derivatives
 
+Creating derivatives is interpreted as a kind of use.
+
 ### True
+
+Creating derivatives is interpreted as true for applicable standard licenses, if no restrictions are imposed, if it is explicitly allowed for all data, or if the GBIF use agreement is referenced.
 
 ### False
 
+Creating derivatives is interpreted as false for the standard licenses [CC BY-ND](http://creativecommons.org/licenses/by-nd/3.0/) and [CC BY-NC-ND](http://creativecommons.org/licenses/by-nc-nd/3.0/), if it is explicitly forbidden, if all rights are reserved, or use is set to false.
+
+> * These data are copyright by the California Academy of Sciences, with all rights reserved.
+> * UCMP data records may be used by individual researchers or research groups, but they may not be **repackaged**, resold, or redistributed in any form without the express written consent of the UCMP director or designate. […]
+> * Use of the data for commercial or for-profit applications are permitted only via written permission from Instituto de Investigação Científica Tropical. Data are provided to users, but should not be passed on to third parties or redistributed. It is explicitly **forbidden to incorporate these data** into other databases of free or restricted access.
+
 ### Unclear
+
+Creating derivatives is interpreted as unclear if use is unclear or if there are conflicting statements in the license.
 
 ## Commercial
 
