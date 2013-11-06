@@ -129,6 +129,8 @@ Commercial use is interpreted as false for standard licenses with a non-commerci
 
 > * The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
 > * Data are provided for personal research only. Data may not be used for commercial purposes. […]
+> * […] Copying or redistributing MVZ Content in any manner for 
+commercial use, including commercial publication, or for personal gain, is strictly prohibited. […]
 > * Use of the data for commercial or for-profit applications **are permitted only via written permission** from Instituto de Investigação Científica Tropical. […]
 > * The University of Texas at Arlington makes its records available for **scholarly research**. […]
 
