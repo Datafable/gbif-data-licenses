@@ -13,6 +13,8 @@ The licenses are interpreted using the following parameters, which can be set to
 * `share alike` required?
 * `notification` required?
 
+Some licenses are too unclear to set those parameters (see last section).
+
 ## Standard license
 
 ### True
