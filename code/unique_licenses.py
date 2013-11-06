@@ -23,7 +23,7 @@ def get_unique_input_licenses(infile_name):
     input_licenses = []
     header = csvreader.next()
     for row in csvreader:
-	ds_key, ds_owner_key, license = row
+	ds_key, ds_owner_key, numberOfOccurrences, license = row
 	if not license in input_licenses:
 	    input_licenses.append(license)
     print "number of unique licenses: {0}".format(len(input_licenses))
