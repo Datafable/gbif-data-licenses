@@ -149,9 +149,33 @@ Commercial use is interpreted as unclear if use is unclear, if the use clause ca
 
 ### True
 
+Attribution required is interpreted as true for standard licenses with an attribution clause (such as [CC BY](http://creativecommons.org/licenses/by/3.0/)), if it is explicitly required, or if the GBIF use agreement is referenced.
+
+> * The data in this dataset is free to share, modify and use on the only condition that the data creators are attributed in citation and acknowledgement.
+> * […] If any of these records are used in an analysis or report, **the provenance of the original data must be acknowledged** and the PSM notified. […]
+> * Acknowledge the use of records from this dataset in the form appearing in the 'Citation' field and acknowledge this use of the OBIS facility. Recognise the limitations of data in OBIS.
+> * The copyright for any material created by the DSMZ is reserved. The duplication or use of information and data such as texts or images is only permitted with the indication of the source or with prior approval by the DSMZ.
+> * Data may be used for non-commercial purposes only, with appropriate credit given to the Atlas project partners. […]
+> * Proper citation of web resource.
+> * No restrictions (Dataset must be cited)
+> * When using the data please refer to the 'Dutch Vegetation Database' as managed by Alterra, Wageningen, The Netherlands.
+
 ### False
 
+Attribution required is interpreted as false if a standard public domain waiver is used (such as [CC0](http://creativecommons.org/publicdomain/zero/1.0/)), if there are no restrictions, or if attribution is not required, nor hinted at.
+
+> * Este trabajo está bajo una licencia Creative Commons Zero (CC0) 1.0  http://creativecommons.org/publicdomain/zero/1.0/legalcode
+> * ITIS data is in the public domain
+> * The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
+> * Use of the data for commercial or for-profit applications are permitted only via written permission from Instituto de Investigação Científica Tropical. Data are provided to users, but should not be passed on to third parties or redistributed. It is explicitly forbidden to incorporate these data into other databases of free or restricted access.
+
 ### Unclear
+
+Attribution required is interpreted as unclear is use is unclear, if it is only hinted at, or only required for substantial use of the data.
+
+> * free according to the standards of scientific publications
+> * Data are freely available through GBIF and through the AADC web site. If **substantial parts** of the database is used for other data or information products, please acknowledge the source.
+> * Please contact R.M. Lopes for additional details on proper dataset citation
 
 ## Share alike
 
@@ -196,7 +220,7 @@ The license is unclear or is not a license at all
 > * Not available until published
 > * BfN/NetPhyD
 > * Usage of Taiwan Forestry Research Institute.
- * Alpha version! Use at own risc.
+> * Alpha version! Use at own risc.
 > * The Borror Laboratory of Bioacoustics provides high-quality copies of recordings for research, education, management, and other uses. Please contact us at borrorlab.osu.edu 01 614 292 2176 to make requests or inquiries.
 > * The MNCN does not guarantee the accuracy of these data. Individual researchers should verify individual records by making direct reference to corresponding museum specimens.
 > * Contact Metafro team
