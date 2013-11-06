@@ -53,11 +53,12 @@ Data use is interpreted as true for all standard licenses (see above), if no res
 
 ### False
 
-Data use is interpreted as false if all rights are reserved or if use (without contact) is explicitly forbidden.
+Data use is interpreted as false if all rights are reserved or if contact is explicitly required before using the data.
 
 > * These data are Copyright by the California Academy of Sciences, with all rights reserved.
 > * Data may not be used without permissionContact info@mantamatcher.org
 > * Terms of use Ghana Herbarium data: all rights on this data file belong to the University of Ghana / Ghana Herbarium. Please contact the Herbarium data manager before secondary usage of data in electronic or printed form.
+> * Contact us before using the data
 
 ### Unclear
 
@@ -66,6 +67,7 @@ Data use is interpreted as unclear if it is only allowed for parts of the data o
 > * Data records made available from Tiira Bird Observation System for the GBIF Data Portal may be used by individual researchers or research groups for scientific non-commercial purposes only. […] If this data **comprises an essential part of the work**, a priori consent must be obtained, and the possibility of joint work negotiated. Any other purposes of use are forbidden in any form without the explicit written consent of BirdLife Finland. […] BirdLife Finland has the right of use to these data records.
 > * […] Except as otherwise expressly stated herein, material from the Databases may not be reproduced, distributed, publicly displayed or otherwise used , in whole or in part, without the express written permission of the Academy.Subsets of the records in one or more of the Databases may be used, downloaded, reproduced, publicly displayed, distributed or reprinted by persons affiliated with academic and/or non-profit organizations for scientific and scholarly purposes only, provided however, that the following attribution appears in all copies: "Information provided with the permission of The Academy of Natural Sciences, Philadelphia, PA." Nevertheless, the Academy does not grant permission for anyone to use, download, reproduce, publicly display, distribute or reprint **all or substantially all** of the records in one or more of the Databases. […]
 > * […] Not to use data contained in OBIS-SEAMAP **in any publication** without the written consent of the original data provider. […]
+> * Please contact Dr. G.M. Dirkse gerard.dirkse@natuurmuseum.nl before use of the data in **electronic files or printed publications**.
 
 ## Distribution
 
