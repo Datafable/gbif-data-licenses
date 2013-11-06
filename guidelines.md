@@ -56,6 +56,7 @@ Data use is interpreted as false if all rights are reserved or if use (without c
 > * These data are Copyright by the California Academy of Sciences, with all rights reserved.
 > * Data may not be used without permissionContact info@mantamatcher.org
 > * Terms of use Ghana Herbarium data: all rights on this data file belong to the University of Ghana / Ghana Herbarium. Please contact the Herbarium data manager before secondary usage of data in electronic or printed form.
+> * Not to use data contained in OBIS-SEAMAP in any publication without the written consent of the original data provider.
 
 ### Unclear
 
@@ -68,15 +69,27 @@ Data use is interpreted as unclear if it is only allowed for parts of the data.
 
 ### True
 
-Data distribution is interpreted as true for all standard licenses, ...
+Data distribution is interpreted as true for all standard licenses, if no restrictions are imposed, if it is explicitly allowed for all data, or if the GBIF use agreement is referenced.
+
+> * No release restrictions
+> * The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
+> * The GRIN Taxonomy is public data with free and open access with no restrictions.
+> * Data from this dataset may be used and shared freely when the creators of the data are attributed correctly.
+> * Copyright 2013, National Biodiversity Data Centre, Waterford, Ireland. The information is free to use by individuals provided the owners of the data are acknowledged in any use of publication, or that the use of the data is cited in the following format […]
+> * GBIF Data Use Agreement and GBIF Data Sharing Agreement apply.
 
 ### False
 
-Data distribution use is interpreted as false if it is explicitly forbidden.
+Data distribution is interpreted as false if it is explicitly forbidden or if use is set to false.
 
 > * Release with permission of the appropriate parties.
+> * Oregon State University data records may be used by individual researchers or research groups, but they **may not be** repackaged, resold, or **redistributed** in any form without the express written consent of a curator of the appropriate collection. […]
 
 ### Unclear
+
+Data distribution is interpreted as unclear if use is unclear or if there are conflicting statements in the license.
+
+> * […] These records are intended for use in education and research and **may not be** repackaged, **redistributed**, or sold in any form without prior written consent from the collection(s) holding such data. […] For Terms of Use specific to the Museum of Vertebrate Zoology, see **http://mvz.berkeley.edu/PDFs/MVZ_terms_of_use.pdf**
 
 ## Derivatives
 
