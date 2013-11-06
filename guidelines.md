@@ -89,12 +89,14 @@ Data distribution is interpreted as false if it is explicitly forbidden, if all 
 > * Release with permission of the appropriate parties.
 > * Oregon State University data records may be used by individual researchers or research groups, but they **may not be** repackaged, resold, or **redistributed** in any form without the express written consent of a curator of the appropriate collection. […]
 > * Data are provided for personal research only. Data may not be used for any commercial purposes. Data **may not be transferred** to another database for distribution to others without prior, written permission from the Canadian Museum of Nature.
+> * […] No part of this data base may be copied or **reproduced** without written permission from the legal owner. […]
 
 ### Unclear
 
-Data distribution is interpreted as unclear if use is unclear or if there are conflicting statements in the license.
+Data distribution is interpreted as unclear if use is unclear or if there are conflicting or dubious statements in the license.
 
 > * […] These records are intended for use in education and research and **may not be** repackaged, **redistributed**, or sold in any form without prior written consent from the collection(s) holding such data. […] For Terms of Use specific to the Museum of Vertebrate Zoology, see **http://mvz.berkeley.edu/PDFs/MVZ_terms_of_use.pdf**
+> * For scientific and noncommercial purposes, the database can be **consulted** freely. […]
 
 ## Derivatives
 
@@ -112,7 +114,10 @@ Creating derivatives is interpreted as false for standard licenses with a non-de
 
 ### Unclear
 
-Creating derivatives is interpreted as unclear if use is unclear or if there are conflicting statements in the license.
+Creating derivatives is interpreted as unclear if use is unclear or if there are conflicting or dubious statements in the license.
+
+> * […] No part of this data base may be **copied or reproduced** without written permission from the legal owner. […]
+> * For scientific and noncommercial purposes, the database can be **consulted** freely. […]
 
 ## Commercial
 
@@ -193,6 +198,7 @@ Notification is interpreted as true if it is explicitly required.
 
 > * […] If any of these records are used in scientific analysis or report, the provenance of the original data must be acknowledged and the publication or report sent to BirdLife Finland […]
 > * […] If any of these records are used in an analysis or report, the provenance of the original data must be acknowledged and the PSM notified. […]
+> * […] If these data comprise a significant part of data used in publication, the creator of this resource must be given the possibility to comment a manuscript, and offered the possibil
 
 ### False
 
@@ -218,6 +224,7 @@ The license is unclear or is not a license at all
 
 > * No
 > * Not available until published
+> * Freely available after moratorium period
 > * BfN/NetPhyD
 > * Usage of Taiwan Forestry Research Institute.
 > * Alpha version! Use at own risc.
