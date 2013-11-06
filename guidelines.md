@@ -76,6 +76,38 @@ Data distribution use is interpreted as false if it is explicitly forbidden.
 
 ### Unclear
 
+## Derivatives
+
+### True
+
+### False
+
+### Unclear
+
+## Commercial
+
+### True
+
+### False
+
+### Unclear
+
+## Attribution
+
+### True
+
+### False
+
+### Unclear
+
+## Share alike
+
+### True
+
+### False
+
+### Unclear
+
 ## Notification
 
 ### True
