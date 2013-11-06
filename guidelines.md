@@ -2,16 +2,18 @@
 
 The licenses are interpreted only by using the information provided in the `rights` field of the dataset metadata. If a link is provided, the linked document is also used in the interpretation. No contact is made with the data publisher or owner.
 
-The licenses are interpreted using the following parameters, which can be set to `true`, `false` or `?` (= unclear):
+## License parameters
 
-* is a `standard license`?
-* data `use` allowed?
-* data (re)`distribution` allowed?
-* Creating `derivatives` allowed?
-* `commercial` use allowed?
-* `attribution` required?
-* `share alike` required?
-* `notification` required?
+The licenses are interpreted using the following parameters, which can be set to `true`, `false` or `?` (= unclear). These parameters are not entirely independent from each other:
+
+    - (is a) standard license
+    - (data) use (allowed) 
+        ↳ (re)distribution (allowed)
+              ↳ share alike (required)
+        ↳ (creating) derivatives (allowed)
+        ↳ commercial (use allowed)
+        ↳ attribution (required)
+    - notification (required)
 
 Some licenses are too unclear to set those parameters (see last section).
 
@@ -67,8 +69,6 @@ Data use is interpreted as unclear if it is only allowed for parts of the data o
 
 ## Distribution
 
-Data distribution is interpreted as a kind of use.
-
 ### True
 
 Data distribution is interpreted as true for all standard licenses, if no restrictions are imposed, if it is explicitly allowed for all data, or if the GBIF use agreement is referenced.
@@ -95,8 +95,6 @@ Data distribution is interpreted as unclear if use is unclear or if there are co
 > * […] These records are intended for use in education and research and **may not be** repackaged, **redistributed**, or sold in any form without prior written consent from the collection(s) holding such data. […] For Terms of Use specific to the Museum of Vertebrate Zoology, see **http://mvz.berkeley.edu/PDFs/MVZ_terms_of_use.pdf**
 
 ## Derivatives
-
-Creating derivatives is interpreted as a kind of use.
 
 ### True
 
