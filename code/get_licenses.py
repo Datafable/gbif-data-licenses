@@ -3,6 +3,7 @@ import requests
 import json
 import csv
 import sys
+from IPython import embed
 
 def parse_dataset_metadata(dataset):
     if 'rights' in dataset.keys():
@@ -10,7 +11,7 @@ def parse_dataset_metadata(dataset):
 	rights = rights.replace("\n", "")
     else:
 	rights = 'not supplied'
-    return [dataset['key'].encode('utf-8'), rights]
+    return [dataset['key'].encode('utf-8'), dataset['owningOrganizationKey'].encode('utf-8'), rights]
 
 def get_gbif_datasets(limit, offset):
     params = {'limit': limit, 'offset': offset}
@@ -18,17 +19,35 @@ def get_gbif_datasets(limit, offset):
     request_result = r.json()['results']
     return request_result
 
+def getOccurrences(key):
+    params = {'datasetKey':  key}
+    r = requests.get('http://api.gbif.org/v0.9/occurrence/count', params=params)
+    try:
+	count = r.json()
+    except:
+        sys.stderr.write('could not parse json for number of occurrences for key {0}\n'.format(key))
+	embed()
+	sys.exit(-1)
+    return count
+
 results = []
+all_datasets = []
 more_results_to_find = True
 offset = 0
 limit = 20
-print '#dataset-key,rights'
-csvwriter = csv.writer(sys.stdout)
+print 'key,owningOrganizationKey,numberOfOccurrences,rights'
+csvwriter = csv.writer(sys.stdout, lineterminator='\n')
 while more_results_to_find:
     datasets = get_gbif_datasets(limit, offset)
-    for dataset in datasets:
-	csvwriter.writerow(parse_dataset_metadata(dataset))
+    all_datasets += datasets
     offset += 20
     if len(datasets) == 0:
 	more_results_to_find = False
+
+for dataset in all_datasets:
+    dataset_list = parse_dataset_metadata(dataset)
+    key = dataset_list[0]
+    count = getOccurrences(key)
+    dataset_list.insert(2, count)
+    csvwriter.writerow(dataset_list)
 
