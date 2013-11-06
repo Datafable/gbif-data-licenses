@@ -102,7 +102,7 @@ Creating derivatives is interpreted as true for applicable standard licenses, if
 
 ### False
 
-Creating derivatives is interpreted as false for the standard licenses [CC BY-ND](http://creativecommons.org/licenses/by-nd/3.0/) and [CC BY-NC-ND](http://creativecommons.org/licenses/by-nc-nd/3.0/), if it is explicitly forbidden, if all rights are reserved, or use is set to false.
+Creating derivatives is interpreted as false for standard licenses with a non-derivatives clause (such as [CC BY-ND](http://creativecommons.org/licenses/by-nd/3.0/)), if it is explicitly forbidden, if all rights are reserved, or use is set to false.
 
 > * These data are copyright by the California Academy of Sciences, with all rights reserved.
 > * UCMP data records may be used by individual researchers or research groups, but they may not be **repackaged**, resold, or redistributed in any form without the express written consent of the UCMP director or designate. […]
@@ -116,9 +116,30 @@ Creating derivatives is interpreted as unclear if use is unclear or if there are
 
 ### True
 
+Commercial use is interpreted as true for applicable standard licenses, if no restrictions are imposed, if it is explicitly allowed for all data, or if the GBIF use agreement is referenced.
+
+> * Commercially available
+> * Copyright 2013, National Biodiversity Data Centre, Waterford, Ireland. The information is free to use by individuals provided the owners of the data are acknowledged in any use of publication, or that the use of the data is cited in the following format […]
+> * Público
+> * GBIF Data Use Agreement and GBIF Data Sharing Ageement apply
+
 ### False
 
+Commercial use is interpreted as false for standard licenses with a non-commercial clause (such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/)), if it is explicitly forbidden, if all rights are reserved, if use is restricted to non-profit or scholarly use, if contact is required, or use is set to false.
+
+> * The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
+> * Data are provided for personal research only. Data may not be used for commercial purposes. […]
+> * Use of the data for commercial or for-profit applications **are permitted only via written permission** from Instituto de Investigação Científica Tropical. […]
+> * The University of Texas at Arlington makes its records available for **scholarly research**. […]
+> * The data and media available through Arctos are the property of the originating institution, with all rights reserved. These records are intended for **use in education and research** […]
+
 ### Unclear
+
+Commercial use is interpreted as unclear if use is unclear, if an unclear creative commons license is used, if there are hints towards non-commercial use (e.g. `use by individual researchers`), or if data `may not be resold` (commercial use has a wider scope than selling data).
+
+> * This work is licenced under a CreativeCommons Licence.
+> * Data records from the Division of Ornithology of the University of Kansas Biodiversity Institute (KUBI) are provided for the **use of individual researchers or research groups**.
+> * MHP data records may be used by individual researchers or research groups, but they **may not** be repackaged, **resold**, or redistributed in any form without the express written consent of a curatorial staff member of the MHP Mammal Collection. If any of these records are used in an analysis or report, the provenance of the original data must be acknowledged and MHP notified. The Sternberg Museum of Natural History and its staff are not responsible for damages, injury or loss due to the use of these data.
 
 ## Attribution
 
