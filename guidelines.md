@@ -186,15 +186,20 @@ The license is not indicated or applies to something other than the data.
 > * none
 > * No information
 > * All commercial use of images must be cleared with Dr. Patterson. dpatterson@mbl.edu
-> * Alpha version! Use at own risc.
 > * http://www.fieldmuseum.org/linking_policy.htm
 
-The license is unclear.
+The license is unclear or is not a license at all
 
 > * No
 > * Not available until published
 > * BfN/NetPhyD
 > * Usage of Taiwan Forestry Research Institute.
+ * Alpha version! Use at own risc.
+> * The Borror Laboratory of Bioacoustics provides high-quality copies of recordings for research, education, management, and other uses. Please contact us at borrorlab.osu.edu 01 614 292 2176 to make requests or inquiries.
+> * The MNCN does not guarantee the accuracy of these data. Individual researchers should verify individual records by making direct reference to corresponding museum specimens.
+> * Contact Metafro team
+> * RGM_GERTH version 2008-05-03Contact Dr. W. Renema
+> * RGM_MIJNWEZEN version 2008-05-07Richtlijnen / voorwaarden onder welke de database kan worden gebruikt, eventueel naam van contactpersoon voor meer info.
 
 The license only indicates the (copyright) owner, but does not specify how the data can be used. Chances are high it is "All rights reserved".
 
