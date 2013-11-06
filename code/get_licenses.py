@@ -22,7 +22,7 @@ results = []
 more_results_to_find = True
 offset = 0
 limit = 20
-print '#dataset-key,rights'
+print 'key,owningOrganizationKey,rights'
 csvwriter = csv.writer(sys.stdout)
 while more_results_to_find:
     datasets = get_gbif_datasets(limit, offset)
