@@ -177,11 +177,12 @@ Attribution required is interpreted as false if a standard public domain waiver 
 
 ### Unclear
 
-Attribution required is interpreted as unclear is use is unclear, if it is only hinted at, or only required for substantial use of the data.
+Attribution required is interpreted as unclear if use is unclear, if it is only hinted at, or only required for substantial or special use of the data.
 
 > * free according to the standards of scientific publications
 > * Data are freely available through GBIF and through the AADC web site. If **substantial parts** of the database is used for other data or information products, please acknowledge the source.
 > * Please contact R.M. Lopes for additional details on proper dataset citation
+> * Please acknowledge NIWA if used for commercial purposes.
 
 ## Share alike
 
