@@ -212,13 +212,14 @@ Notification is interpreted as unclear if contact is required, either because th
 
 If the license is unclear for any of the reasons below, then all field are set to `?` except for `standard license` which is set to `false`.
 
-The license is not indicated or applies to something other than the data.
+The license is not indicated, it applies to something other than the data, or the link to the license is broken.
 
 > * not supplied
 > * none
 > * No information
 > * All commercial use of images must be cleared with Dr. Patterson. dpatterson@mbl.edu
 > * http://www.fieldmuseum.org/linking_policy.htm
+> * http://www.zoo.cam.ac.uk/museum/collections.archives/academic.use/
 
 The license is unclear or is not a license at all
 
