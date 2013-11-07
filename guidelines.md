@@ -212,13 +212,11 @@ Notification is interpreted as unclear if contact is required, either because th
 
 If the license is unclear for any of the reasons below, then all field are set to `?` except for `standard license` which is set to `false`.
 
-The license is not indicated, it applies to something other than the data, or the link to the license is broken.
+The license is not indicated or the link to the license is broken.
 
 > * not supplied
 > * none
 > * No information
-> * All commercial use of images must be cleared with Dr. Patterson. dpatterson@mbl.edu
-> * http://www.fieldmuseum.org/linking_policy.htm
 > * http://www.zoo.cam.ac.uk/museum/collections.archives/academic.use/
 
 The license is unclear or is not a license at all
@@ -241,3 +239,9 @@ The license only indicates the (copyright) owner, but does not specify how the d
 > * Copyright of the Corvids Literature Database: Gabriele Droege.
 > * Copyright © 2012 The President and Fellows of Harvard College
 > * Copyright to this data is asserted by the State of Western Australia on behalf of the Western Australian Herbarium, Department of Environment and Conservation. Please review the copyright before using the data.
+
+The license applies to something other than the data.
+
+> * All commercial use of images must be cleared with Dr. Patterson. dpatterson@mbl.edu
+> * http://www.fieldmuseum.org/linking_policy.htm
+> * http://www.fonozoo.com/eng/faq.php
