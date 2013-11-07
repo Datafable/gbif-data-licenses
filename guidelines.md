@@ -9,10 +9,10 @@ The licenses are interpreted using the following parameters, which can be set to
     - (is a) standard license
     - (data) use (allowed) 
         ↳ (re)distribution (allowed)
-              ↳ share alike (required)
         ↳ (creating) derivatives (allowed)
         ↳ commercial (use allowed)
         ↳ attribution (required)
+        ↳ share alike (required)
     - notification (required)
 
 Some licenses are too unclear to set those parameters (see last section).
@@ -188,9 +188,28 @@ Attribution required is interpreted as unclear if use is unclear, if it is only 
 
 ### True
 
+Share alike required is interpreted as true for standard licenses with a share alike clause (such as [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/)).
+
+> * Los datos de este recurso están sujetos a la licencia CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
 ### False
 
+Share alike required is interpreted as false for standard licenses without a share alike clause (such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/)), if a standard public domain waiver is used (such as [CC0](http://creativecommons.org/publicdomain/zero/1.0/)), or if there are no restrictions or requirements (optionally with a liability disclaimer only).
+
+> * CC-BY
+> * cc0 Creative Commons No copyright
+> * ITIS data is in the public domain
+> * Commercially available
+> * free
+> * The dataset enclosed within this package/transmission are only as good as the quality assurance and quality control procedures outlined by the enclosed metadata reporting statement. The user bears all responsibility for its subsequent use/misuse in any further analyses or comparisons. The Federal Government does not assume liability to the Recipient or third persons, nor will the Federal Government indemnify the Recipient for its liability due to any losses resulting in any way from the use of this dataset.
+
 ### Unclear
+
+Share alike required is interpreted as unclear in all other cases, as it is unclear if distributed or derivative data should use the same or similar license.
+
+> * Open data [does not exclude share alike]
+> * A copy of final article paper, book, etc to be forwarded to data provider. [notification requirement]
+> * Any data gained from the results of the European Moth Nights and the full text or shortened version of the relevant scientific balance complete with maps may be freely used for further scientific, nature conservancy or educational purposes. Only the indic
 
 ## Notification
 
