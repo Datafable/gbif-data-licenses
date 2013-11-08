@@ -10,7 +10,7 @@ def parse_dataset_metadata(dataset):
 	rights = dataset['rights'].encode('utf-8').strip()
 	rights = rights.replace("\n", "")
     else:
-	rights = 'not supplied'
+	rights = ''
     return [dataset['key'].encode('utf-8'), dataset['owningOrganizationKey'].encode('utf-8'), rights]
 
 def get_gbif_datasets(limit, offset):
