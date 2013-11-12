@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../lib/d3.v3.min.js"></script>
+    <script src="../lib/novus-nvd3-764767a/nv.d3.min.js"></script>
+    <link href="../lib/novus-nvd3-764767a/src/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="../lib/novus-nvd3-764767a/src/utils.js"></script>
+    <script src="../lib/novus-nvd3-764767a/src/models/pie.js"></script>
+    
+
+<h1>Standard license vs non-standard license</h1>
+<h2>Occurrences</h2>
+<svg id="container1" style="width:60%; height: 400px;"></svg>
+
+<h2>Datasets</h2>
+<svg id="container2" style="width:60%; height: 400px;"></svg>
+
+
+<script>
+    nv.addGraph(function() {
+	var chart = nv.models.pieChart()
+	.x(function(d) {return d.label })
+	.y(function(d) {return d.value })
+	.showLabels(true);
+
+	d3.select("#container1")
+	.datum([{'value': 9883701, 'label': 'standard license'}, {'value': 405456130, 'label': 'no standard license'}])
+	.transition()
+	.duration(1200)
+	.call(chart);
+
+	return chart;
+    } );
+
+    nv.addGraph(function() {
+	var chart = nv.models.pieChart()
+	.x(function(d) {return d.label })
+	.y(function(d) {return d.value })
+	.showLabels(true);
+
+	d3.select("#container2")
+	.datum([{'value': 165, 'label': 'standard license'}, {'value': 11800, 'label': 'no standard license'}])
+	.transition()
+	.duration(1200)
+	.call(chart);
+
+	return chart;
+    } );
+
+    </script>
+    
