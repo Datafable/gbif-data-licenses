@@ -17,11 +17,11 @@ def get_total_nr_of_datasets(data):
     return total
 
 def get_nr_of_datasets_with_standard_license(data):
-    subset = data[data['standard license'] == True]
+    subset = data[data['standard license'].notnull()]
     return len(subset)
 
 def nr_of_occurrences_with_standard_license(data):
-    subset = data[data['standard license'] == True]
+    subset = data[data['standard license'].notnull()]
     subset_sum = subset['numberOfOccurrences'].apply(int).sum()
     print 'number of occurrences with standard licenses: {0}'.format(subset_sum)
     return subset_sum
