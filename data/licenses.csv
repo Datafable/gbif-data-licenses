@@ -1,5 +1,5 @@
 standard license,use,distribution,derivatives,commercial,attribution,share alike,notification,license
-false,?,?,?,?,?,?,?,not supplied
+false,?,?,?,?,?,?,?,
 false,true,true,true,false,false,?,false,The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.
 true,true,true,true,true,true,false,false,"Esta [Chiropteros en el Parque Natural Regional El Vínculo y su zona de amortiguación (Buga, Valle del Cauca)] se hace disponible bajo la licencia Open Data Commons Attribution: http://www.opendatacommons.org/licenses/by/1.0/"
 true,true,true,true,true,false,false,false,Este trabajo está bajo una licencia Creative Commons Zero (CC0) 1.0  http://creativecommons.org/publicdomain/zero/1.0/legalcode
@@ -426,3 +426,4 @@ false,?,?,?,?,?,?,?,© Botanical Garden and Museum Berlin-Dahlem
 false,?,?,?,?,?,?,?,Legal Notice and License Agreement                 http://singer.grinfo.net/terms/index.php?reqid=1143207324.4667.
 false,true,true,true,true,false,false,false,free
 false,true,true,true,false,true,?,false,Die Verwendung der Daten zu kommerziellen Zwecken wird untersagt. Bei Verwendung in Publikationen bitte die Datenquelle vollstaendig zitieren. Fuer die Richtigkeit der Daten wird keine Gewaehrleistung uebernommen. BfN/NetPhyD. Alle ehrenamtlich an der Floristischen Kartierung Deutschlands beteiligten Mitarbeiter.
+true,true,true,true,true,false,false,false,http://creativecommons.org/publicdomain/zero/1.0/

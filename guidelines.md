@@ -235,7 +235,7 @@ If the license is unclear for any of the reasons below, then all field are set t
 
 The license is not indicated or the link to the license is broken.
 
-> * not supplied
+> * [empty, not supplied]
 > * none
 > * No information
 > * http://www.zoo.cam.ac.uk/museum/collections.archives/academic.use/
