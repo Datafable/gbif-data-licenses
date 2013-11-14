@@ -20,7 +20,7 @@ function addPieChart(element,title,data) {
         var chart = nv.models.pieChart()
         .x(function(d) {return d.label })
         .y(function(d) {return d.value })
-        .valueFormat(d3.format("f"))
+        .valueFormat(d3.format(",d"))
         .showLabels(false)
         .donut(true);
 
@@ -49,10 +49,11 @@ function addMultiHorizontalBarChart(element,title,data) {
         var chart = nv.models.multiBarHorizontalChart()
         .x(function(d) {return d.label})
         .y(function(d) {return d.value})
-        .valueFormat(d3.format('f')) // Doesn't seem to have an effect
         .transitionDuration(100)
         .margin({left: 100})
         .stacked(true);
+
+        chart.yAxis.tickFormat(d3.format(",d")); // valueFormat() is available, but has no effect
 
         d3.select(element)
         .datum(data)
