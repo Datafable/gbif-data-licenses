@@ -9,8 +9,8 @@ var general_use_parameters_occurrences = [{"key": "Open", "color": "#27AE60", "v
 
 addPieChart("#chart1","Datasets",standard_licenses_datasets);
 addPieChart("#chart2","Occurrences",standard_licenses_occurrences);
-addMultiBarChart("#chart3","Datasets",general_use_parameters_datasets);
-addMultiBarChart("#chart4","Occurrences",general_use_parameters_occurrences);
+addMultiHorizontalBarChart("#chart3","Datasets",general_use_parameters_datasets);
+addMultiHorizontalBarChart("#chart4","Occurrences",general_use_parameters_occurrences);
 
 // Functions
 
@@ -44,15 +44,13 @@ function addPieChart(element,title,data) {
     });
 }
 
-function addBarChart(element,title,data) {
+function addMultiHorizontalBarChart(element,title,data) {
     nv.addGraph(function() {
-        var chart = nv.models.multiBarChart()
+        var chart = nv.models.multiBarHorizontalChart()
         .x(function(d) {return d.label})
         .y(function(d) {return d.value})
-        //.staggerLabels(true)
-        //.tooltips(false)
-        //.showValues(true)
         .transitionDuration(100)
+        .margin({left: 100})
         .stacked(true);
 
         d3.select(element)
