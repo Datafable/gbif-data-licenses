@@ -40,6 +40,13 @@
             .call(chart);
 
             d3.select(element)
+            .append("text")
+            .attr("x","50%")
+            .attr("y","52%")
+            .attr("text-anchor","middle")
+            .attr("class","title")
+            .text(title);
+
             return chart;
         });
     }
