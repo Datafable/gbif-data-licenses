@@ -6,48 +6,16 @@
 <script src="../../nvd3/src/utils.js"></script>
 <script src="../../nvd3/src/models/pie.js"></script>
 <link href="../charts/css/charts.css" rel="stylesheet" type="text/css">
+<script src="../charts/js/charts.js"></script>
 
 <!-- Style specific for blog -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Quicksand:400">
 <link href="../../spoonbill/static/css/main.css" rel="stylesheet" type="text/css">
-    
+<!-- End -->
+
 <h1>Standard license vs non-standard license</h1>
 <div class="chart piechart clearfix">
     <svg id="chart1"></svg>
     <svg id="chart2"></svg>
 </div>
 
-<script>
-    var datasets = [{"label": "Standard license","color":"#185288","value": 166}, {"label": "Non-standard license","color":"#CCCCCC","value": 11806}];
-    var occurrences = [{"label": "Standard license","color":"#185288","value": 9899370}, {"label": "Non-standard license","color":"#CCCCCC","value": 405513274}];
-    addPieChart("#chart1","Datasets",datasets);
-    addPieChart("#chart2","Occurrences",occurrences);
-
-    function addPieChart(element,title,data) {
-        // Use this patch for colors to work: https://github.com/novus/nvd3/commit/7dcb8d899bbe6279a71c25e9ea309344924029b9
-        nv.addGraph(function() {
-            var chart = nv.models.pieChart()
-            .x(function(d) {return d.label })
-            .y(function(d) {return d.value })
-            .valueFormat(d3.format(',.0f'))
-            .showLabels(false)
-            .donut(true);
-
-            d3.select(element)
-            .datum(data)
-            .transition()
-            .duration(1200)
-            .call(chart);
-
-            d3.select(element)
-            .append("text")
-            .attr("x","50%")
-            .attr("y","52%")
-            .attr("text-anchor","middle")
-            .attr("class","title")
-            .text(title);
-
-            return chart;
-        });
-    }
-</script>
