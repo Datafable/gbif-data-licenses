@@ -38,6 +38,8 @@ function addPieChart(element,title,data) {
         .attr("class","title")
         .text(title);
 
+        nv.utils.windowResize(chart.update);
+
         return chart;
     });
 }
