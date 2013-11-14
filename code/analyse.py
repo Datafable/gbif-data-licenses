@@ -1,5 +1,11 @@
 #!/usr/bin/python
 
+#================================================
+# This file contains several methods that can be
+# used to analyse the data. It prints some output
+# That can be used for creating visualizations.
+#================================================
+
 import pandas as pd
 from IPython import embed
 
@@ -18,6 +24,18 @@ def get_total_nr_of_datasets(data):
 
 def get_nr_of_datasets_with_standard_license(data):
     subset = data[data['standard license'].notnull()]
+    return len(subset)
+
+def get_number_of_datasets_where_use_true(data):
+    subset = data[data['use'] == 'true']
+    return len(subset)
+
+def get_number_of_datasets_where_use_false(data):
+    subset = data[data['use'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_use_unknown(data):
+    subset = data[data['use'] == '?']
     return len(subset)
 
 def nr_of_occurrences_with_standard_license(data):
@@ -79,5 +97,12 @@ def main():
     nr_ds_no_std_lic = total_nr_ds - nr_ds_std_lic
     license_data = {'key': 'datasets', 'values': [{'label': 'standard license', 'value': nr_ds_std_lic}, {'label': 'no standard license', 'value': nr_ds_no_std_lic}]}
     print license_data
+
+    nr_ds_use_true = get_number_of_datasets_where_use_true(data)
+    nr_ds_use_false = get_number_of_datasets_where_use_false(data)
+    nr_ds_use_unknown = get_number_of_datasets_where_use_unknown(data)
+    use_data = {'key': 'datasets', 'values': [{'label': 'yes', 'value': nr_ds_use_true}, {'label': 'no', 'value': nr_ds_use_false}, {'label': 'unknown', 'value': nr_ds_use_unknown}]}
+    print 'usage per dataset'
+    print use_data
 
 main()
