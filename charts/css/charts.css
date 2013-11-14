@@ -1,0 +1,21 @@
+.chart {
+        /*background: #F0F0F0;*/
+    }
+    .chart svg {
+        height: 300px;
+        width: 100%;
+        }
+        .chart svg text {
+            font: normal 12px "Open Sans";
+        }
+        .chart svg .title {
+            font-weight: bold;
+        }
+    .piechart svg {
+        float: left;
+        width: 50%;
+        }
+
+.nvd3.nv-pie path {
+    /*stroke: #CCCCCC;*/
+}
