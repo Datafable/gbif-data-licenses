@@ -6,7 +6,7 @@
         width: 100%;
         }
         .chart svg text {
-            font: normal 12px "Open Sans";
+            font-family: "Open Sans", sans-serif;
         }
         .chart svg .title {
             font-weight: bold;
