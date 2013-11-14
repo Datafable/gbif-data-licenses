@@ -38,6 +38,32 @@ def get_number_of_datasets_where_use_unknown(data):
     subset = data[data['use'] == '?']
     return len(subset)
 
+def get_number_of_datasets_where_distrib_true(data):
+    subset = data[data['distribution'] == 'true']
+    return len(subset)
+
+def get_number_of_datasets_where_distrib_false(data):
+    subset = data[data['distribution'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_distrib_unknown(data):
+    subset = data[data['distribution'] == '?']
+    return len(subset)
+
+def get_number_of_datasets_where_deriv_true(data):
+    subset = data[data['derivatives'] == 'true']
+    return len(subset)
+
+def get_number_of_datasets_where_deriv_false(data):
+    subset = data[data['derivatives'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_deriv_unknown(data):
+    subset = data[data['derivatives'] == '?']
+    return len(subset)
+
+
+
 def nr_of_occurrences_with_standard_license(data):
     subset = data[data['standard license'].notnull()]
     subset_sum = subset['numberOfOccurrences'].apply(int).sum()
@@ -101,7 +127,32 @@ def main():
     nr_ds_use_true = get_number_of_datasets_where_use_true(data)
     nr_ds_use_false = get_number_of_datasets_where_use_false(data)
     nr_ds_use_unknown = get_number_of_datasets_where_use_unknown(data)
-    use_data = {'key': 'datasets', 'values': [{'label': 'yes', 'value': nr_ds_use_true}, {'label': 'no', 'value': nr_ds_use_false}, {'label': 'unknown', 'value': nr_ds_use_unknown}]}
+
+    nr_ds_distrib_true = get_number_of_datasets_where_distrib_true(data)
+    nr_ds_distrib_false = get_number_of_datasets_where_distrib_false(data)
+    nr_ds_distrib_unknown = get_number_of_datasets_where_distrib_unknown(data)
+
+    nr_ds_derivatives_true = get_number_of_datasets_where_deriv_true(data)
+    nr_ds_derivatives_false = get_number_of_datasets_where_deriv_false(data)
+    nr_ds_derivatives_unknown = get_number_of_datasets_where_deriv_unknown(data)
+
+    use_data = [
+        {'color': '#03AD0F', 'key': 'yes', 'values': [
+            {'label': 'usage', 'value': nr_ds_use_true},
+	    {'label': 'distribution', 'value': nr_ds_distrib_true},
+	    {'label': 'derivatives', 'value': nr_ds_derivatives_true}
+	]},
+	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
+	    {'label': 'usage', 'value': nr_ds_use_unknown},
+	    {'label': 'distribution', 'value': nr_ds_distrib_unknown},
+	    {'label': 'derivatives', 'value': nr_ds_derivatives_unknown}
+	]},
+	{'color': '#ED0000', 'key': 'no', 'values': [
+	    {'label': 'usage', 'value': nr_ds_use_false},
+	    {'label': 'distribution', 'value': nr_ds_distrib_false},
+	    {'label': 'derivatives', 'value': nr_ds_derivatives_false}
+	]}
+    ]
     print 'usage per dataset'
     print use_data
 

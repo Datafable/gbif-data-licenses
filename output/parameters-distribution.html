@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <script src="/Users/bart_aelterman/test/highcharts/jquery.min.js"></script>
+    <script src="../lib/d3.v3.min.js"></script>
+    <script src="../lib/novus-nvd3-764767a/nv.d3.min.js"></script>
+    <link href="../lib/novus-nvd3-764767a/src/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="../lib/novus-nvd3-764767a/src/utils.js"></script>
+    <!-- <script src="../lib/novus-nvd3-764767a/src/models/discreteBar.js"></script> -->
+    <!-- <script src="../lib/novus-nvd3-764767a/src/models/discreteBarChart.js"></script> -->
+    <script src="../lib/novus-nvd3-764767a/src/models/multiBar.js"></script>
+    <script src="../lib/novus-nvd3-764767a/src/models/multiBarChart.js"></script>
+    
+
+<h1>Datasets</h1>
+<svg id="container1" style="width:60%; height: 400px;"></svg>
+
+
+<script>
+    // Plot the usage per dataset
+
+    nv.addGraph(function() {
+	var chart = nv.models.multiBarChart()
+	    .x(function(d) {return d.label})
+	    .y(function(d) {return d.value})
+	    //.staggerLabels(true)
+	    //.tooltips(false)
+	    //.showValues(true)
+	    .transitionDuration(250)
+	    .stacked(true);
+
+	d3.select("#container1")
+	.datum([{'color': '#03AD0F', 'values': [{'value': 905, 'label': 'usage'}, {'value': 647, 'label': 'distribution'}, {'value': 731, 'label': 'derivatives'}], 'key': 'yes'}, {'color': '#9E9E9E', 'values': [{'value': 10980, 'label': 'usage'}, {'value': 10975, 'label': 'distribution'}, {'value': 10998, 'label': 'derivatives'}], 'key': 'unknown'}, {'color': '#ED0000', 'values': [{'value': 87, 'label': 'usage'}, {'value': 350, 'label': 'distribution'}, {'value': 243, 'label': 'derivatives'}], 'key': 'no'}])
+	.transition()
+	.duration(500)
+	.call(chart);
+
+	nv.utils.windowResize(chart.update);
+
+	return chart;
+
+    } );
+
+    </script>
