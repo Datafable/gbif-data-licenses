@@ -50,7 +50,7 @@ function addMultiHorizontalBarChart(element,title,data) {
         .x(function(d) {return d.label})
         .y(function(d) {return d.value})
         .transitionDuration(100)
-        .margin({left: 100})
+        .margin({left: 100, right: 45})
         .stacked(true);
 
         chart.yAxis.tickFormat(d3.format(",d")); // valueFormat() is available, but has no effect
