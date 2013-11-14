@@ -29,6 +29,7 @@
             var chart = nv.models.pieChart()
             .x(function(d) {return d.label })
             .y(function(d) {return d.value })
+            .valueFormat(d3.format(',.0f'))
             .showLabels(false)
 
             d3.select(element)
