@@ -12,43 +12,31 @@
 <link href="../../spoonbill/static/css/main.css" rel="stylesheet" type="text/css">
     
 <h1>Standard license vs non-standard license</h1>
-<h2>Occurrences</h2>
-<svg id="container1" style="width:60%; height: 400px;"></svg>
-
-<h2>Datasets</h2>
-<svg id="container2" style="width:60%; height: 400px;"></svg>
-
+<div class="chart piechart clearfix">
+    <svg id="chart1"></svg>
+    <svg id="chart2"></svg>
+</div>
 
 <script>
-    nv.addGraph(function() {
-	var chart = nv.models.pieChart()
-	.x(function(d) {return d.label })
-	.y(function(d) {return d.value })
-	.showLabels(true);
+    var datasets = [{"label": "Standard license","color":"#185288","value": 166}, {"label": "Non-standard license","color":"#CCCCCC","value": 11806}];
+    var occurrences = [{"label": "Standard license","color":"#185288","value": 9899370}, {"label": "Non-standard license","color":"#CCCCCC","value": 405513274}];
+    addPieChart("#chart1","Datasets",datasets);
+    addPieChart("#chart2","Occurrences",occurrences);
 
-	d3.select("#container1")
-	.datum([{'value': 9899370, 'label': 'standard license'}, {'value': 405513274, 'label': 'no standard license'}])
-	.transition()
-	.duration(1200)
-	.call(chart);
+    function addPieChart(element,title,data) {
+        // Use this patch for colors to work: https://github.com/novus/nvd3/commit/7dcb8d899bbe6279a71c25e9ea309344924029b9
+        nv.addGraph(function() {
+            var chart = nv.models.pieChart()
+            .x(function(d) {return d.label })
+            .y(function(d) {return d.value })
 
-	return chart;
-    } );
+            d3.select(element)
+            .datum(data)
+            .transition()
+            .duration(1200)
+            .call(chart);
 
-    nv.addGraph(function() {
-	var chart = nv.models.pieChart()
-	.x(function(d) {return d.label })
-	.y(function(d) {return d.value })
-	.showLabels(true);
-
-	d3.select("#container2")
-	.datum([{'value': 166, 'label': 'standard license'}, {'value': 11806, 'label': 'no standard license'}])
-	.transition()
-	.duration(1200)
-	.call(chart);
-
-	return chart;
-    } );
-
-    </script>
-    
+            return chart;
+        });
+    }
+</script>
