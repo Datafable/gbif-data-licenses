@@ -11,11 +11,7 @@
         .chart svg .title {
             font-weight: bold;
         }
-    .piechart svg {
+    .two-charts svg {
         float: left;
         width: 50%;
-        }
-
-.nvd3.nv-pie path {
-    /*stroke: #CCCCCC;*/
-}
+    }
