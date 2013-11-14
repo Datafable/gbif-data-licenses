@@ -29,6 +29,7 @@
             var chart = nv.models.pieChart()
             .x(function(d) {return d.label })
             .y(function(d) {return d.value })
+            .showLabels(false)
 
             d3.select(element)
             .datum(data)
@@ -36,6 +37,7 @@
             .duration(1200)
             .call(chart);
 
+            d3.select(element)
             return chart;
         });
     }
