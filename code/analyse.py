@@ -62,7 +62,53 @@ def get_number_of_datasets_where_deriv_unknown(data):
     subset = data[data['derivatives'] == '?']
     return len(subset)
 
+def get_number_of_datasets_where_commer_true(data):
+    subset = data[data['commercial'] == 'true']
+    return len(subset)
 
+def get_number_of_datasets_where_commer_false(data):
+    subset = data[data['commercial'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_commer_unknown(data):
+    subset = data[data['commercial'] == '?']
+    return len(subset)
+
+def get_number_of_datasets_where_attrib_true(data):
+    subset = data[data['attribution'] == 'true']
+    return len(subset)
+
+def get_number_of_datasets_where_attrib_false(data):
+    subset = data[data['attribution'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_attrib_unknown(data):
+    subset = data[data['attribution'] == '?']
+    return len(subset)
+
+def get_number_of_datasets_where_share_true(data):
+    subset = data[data['share alike'] == 'true']
+    return len(subset)
+
+def get_number_of_datasets_where_share_false(data):
+    subset = data[data['share alike'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_share_unknown(data):
+    subset = data[data['share alike'] == '?']
+    return len(subset)
+
+def get_number_of_datasets_where_notific_true(data):
+    subset = data[data['notification'] == 'true']
+    return len(subset)
+
+def get_number_of_datasets_where_notific_false(data):
+    subset = data[data['notification'] == 'false']
+    return len(subset)
+
+def get_number_of_datasets_where_notific_unknown(data):
+    subset = data[data['notification'] == '?']
+    return len(subset)
 
 def nr_of_occurrences_with_standard_license(data):
     subset = data[data['standard license'].notnull()]
@@ -124,33 +170,61 @@ def main():
     license_data = {'key': 'datasets', 'values': [{'label': 'standard license', 'value': nr_ds_std_lic}, {'label': 'no standard license', 'value': nr_ds_no_std_lic}]}
     print license_data
 
-    nr_ds_use_true = get_number_of_datasets_where_use_true(data)
-    nr_ds_use_false = get_number_of_datasets_where_use_false(data)
+    nr_ds_use_ok = get_number_of_datasets_where_use_true(data)
+    nr_ds_use_notok= get_number_of_datasets_where_use_false(data)
     nr_ds_use_unknown = get_number_of_datasets_where_use_unknown(data)
 
-    nr_ds_distrib_true = get_number_of_datasets_where_distrib_true(data)
-    nr_ds_distrib_false = get_number_of_datasets_where_distrib_false(data)
+    nr_ds_distrib_ok = get_number_of_datasets_where_distrib_true(data)
+    nr_ds_distrib_notok = get_number_of_datasets_where_distrib_false(data)
     nr_ds_distrib_unknown = get_number_of_datasets_where_distrib_unknown(data)
 
-    nr_ds_derivatives_true = get_number_of_datasets_where_deriv_true(data)
-    nr_ds_derivatives_false = get_number_of_datasets_where_deriv_false(data)
+    nr_ds_derivatives_ok = get_number_of_datasets_where_deriv_true(data)
+    nr_ds_derivatives_notok = get_number_of_datasets_where_deriv_false(data)
     nr_ds_derivatives_unknown = get_number_of_datasets_where_deriv_unknown(data)
+
+    nr_ds_commercial_ok = get_number_of_datasets_where_commer_true(data)
+    nr_ds_commercial_notok = get_number_of_datasets_where_commer_false(data)
+    nr_ds_commercial_unknown = get_number_of_datasets_where_commer_unknown(data)
+
+    nr_ds_attrib_notok = get_number_of_datasets_where_attrib_true(data)
+    nr_ds_attrib_ok = get_number_of_datasets_where_attrib_false(data)
+    nr_ds_attrib_unknown = get_number_of_datasets_where_attrib_unknown(data)
+
+    nr_ds_share_notok = get_number_of_datasets_where_share_true(data)
+    nr_ds_share_ok = get_number_of_datasets_where_share_false(data)
+    nr_ds_share_unknown = get_number_of_datasets_where_share_unknown(data)
+
+    nr_ds_notific_notok = get_number_of_datasets_where_notific_true(data)
+    nr_ds_notific_ok = get_number_of_datasets_where_notific_false(data)
+    nr_ds_notific_unknown = get_number_of_datasets_where_notific_unknown(data)
 
     use_data = [
         {'color': '#03AD0F', 'key': 'yes', 'values': [
-            {'label': 'usage', 'value': nr_ds_use_true},
-	    {'label': 'distribution', 'value': nr_ds_distrib_true},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_true}
+            {'label': 'usage', 'value': nr_ds_use_ok},
+	    {'label': 'distribution', 'value': nr_ds_distrib_ok},
+	    {'label': 'derivatives', 'value': nr_ds_derivatives_ok},
+	    {'label': 'commercial', 'value': nr_ds_commercial_ok},
+	    {'label': 'attribution', 'value': nr_ds_attrib_ok},
+	    {'label': 'share alike', 'value': nr_ds_share_ok},
+	    {'label': 'notification', 'value': nr_ds_notific_ok}
 	]},
 	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
 	    {'label': 'usage', 'value': nr_ds_use_unknown},
 	    {'label': 'distribution', 'value': nr_ds_distrib_unknown},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_unknown}
+	    {'label': 'derivatives', 'value': nr_ds_derivatives_unknown},
+	    {'label': 'commercial', 'value': nr_ds_commercial_unknown},
+	    {'label': 'attribution', 'value': nr_ds_attrib_unknown},
+	    {'label': 'share alike', 'value': nr_ds_share_unknown},
+	    {'label': 'notification', 'value': nr_ds_notific_unknown}
 	]},
 	{'color': '#ED0000', 'key': 'no', 'values': [
-	    {'label': 'usage', 'value': nr_ds_use_false},
-	    {'label': 'distribution', 'value': nr_ds_distrib_false},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_false}
+	    {'label': 'usage', 'value': nr_ds_use_notok},
+	    {'label': 'distribution', 'value': nr_ds_distrib_notok},
+	    {'label': 'derivatives', 'value': nr_ds_derivatives_notok},
+	    {'label': 'commercial', 'value': nr_ds_commercial_notok},
+	    {'label': 'attribution', 'value': nr_ds_attrib_notok},
+	    {'label': 'share alike', 'value': nr_ds_share_notok},
+	    {'label': 'notification', 'value': nr_ds_notific_notok}
 	]}
     ]
     print 'usage per dataset'
