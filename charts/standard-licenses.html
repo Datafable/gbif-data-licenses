@@ -31,6 +31,7 @@
             .y(function(d) {return d.value })
             .valueFormat(d3.format(',.0f'))
             .showLabels(false)
+            .donut(true);
 
             d3.select(element)
             .datum(data)
