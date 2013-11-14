@@ -26,6 +26,15 @@ def get_nr_of_datasets_with_standard_license(data):
     subset = data[data['standard license'].notnull()]
     return len(subset)
 
+def nr_of_occurrences_with_standard_license(data):
+    subset = data[data['standard license'].notnull()]
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    print 'number of occurrences with standard licenses: {0}'.format(subset_sum)
+    return subset_sum
+
+#----------------------------
+# The following methods calculate the number of datasets having a license with specific parameters
+#----------------------------
 def get_number_of_datasets_where_use_true(data):
     subset = data[data['use'] == 'true']
     return len(subset)
@@ -110,12 +119,117 @@ def get_number_of_datasets_where_notific_unknown(data):
     subset = data[data['notification'] == '?']
     return len(subset)
 
-def nr_of_occurrences_with_standard_license(data):
-    subset = data[data['standard license'].notnull()]
+#----------------------------
+# The following methods calculate the number of occurrences having a license with specific parameters
+#----------------------------
+def get_number_of_occ_where_use_true(data):
+    subset = data[data['use'] == 'true']
     subset_sum = subset['numberOfOccurrences'].apply(int).sum()
-    print 'number of occurrences with standard licenses: {0}'.format(subset_sum)
     return subset_sum
 
+def get_number_of_occ_where_use_false(data):
+    subset = data[data['use'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_use_unknown(data):
+    subset = data[data['use'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_distrib_true(data):
+    subset = data[data['distribution'] == 'true']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_distrib_false(data):
+    subset = data[data['distribution'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_distrib_unknown(data):
+    subset = data[data['distribution'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_deriv_true(data):
+    subset = data[data['derivatives'] == 'true']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_deriv_false(data):
+    subset = data[data['derivatives'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_deriv_unknown(data):
+    subset = data[data['derivatives'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_commer_true(data):
+    subset = data[data['commercial'] == 'true']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_commer_false(data):
+    subset = data[data['commercial'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_commer_unknown(data):
+    subset = data[data['commercial'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_attrib_true(data):
+    subset = data[data['attribution'] == 'true']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_attrib_false(data):
+    subset = data[data['attribution'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_attrib_unknown(data):
+    subset = data[data['attribution'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_share_true(data):
+    subset = data[data['share alike'] == 'true']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_share_false(data):
+    subset = data[data['share alike'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_share_unknown(data):
+    subset = data[data['share alike'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_notific_true(data):
+    subset = data[data['notification'] == 'true']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_notific_false(data):
+    subset = data[data['notification'] == 'false']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+def get_number_of_occ_where_notific_unknown(data):
+    subset = data[data['notification'] == '?']
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    return subset_sum
+
+#----------------------------
+# Methods for printing html
+#----------------------------
 def get_html_header():
     return """
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -156,6 +270,10 @@ def generate_pie_chart_html(chart_title, chart_data, plotnr):
     """.format(chart_data, plotnr)
     return index_html + chart_js_code
 
+#----------------------------
+# Main method
+#----------------------------
+
 def main():
     data = get_data('data/joined_data.csv')
     total_oc = get_total_nr_of_occurrences(data)
@@ -170,6 +288,7 @@ def main():
     license_data = {'key': 'datasets', 'values': [{'label': 'standard license', 'value': nr_ds_std_lic}, {'label': 'no standard license', 'value': nr_ds_no_std_lic}]}
     print license_data
 
+# Analyse parameters per dataset
     nr_ds_use_ok = get_number_of_datasets_where_use_true(data)
     nr_ds_use_notok= get_number_of_datasets_where_use_false(data)
     nr_ds_use_unknown = get_number_of_datasets_where_use_unknown(data)
@@ -197,6 +316,7 @@ def main():
     nr_ds_notific_notok = get_number_of_datasets_where_notific_true(data)
     nr_ds_notific_ok = get_number_of_datasets_where_notific_false(data)
     nr_ds_notific_unknown = get_number_of_datasets_where_notific_unknown(data)
+
 
     use_data = [
         {'color': '#03AD0F', 'key': 'yes', 'values': [
@@ -228,6 +348,67 @@ def main():
 	]}
     ]
     print 'usage per dataset'
+    print use_data
+
+# Analyse parameters per occurrence
+    nr_occ_use_ok = get_number_of_occ_where_use_true(data)
+    nr_occ_use_notok= get_number_of_occ_where_use_false(data)
+    nr_occ_use_unknown = get_number_of_occ_where_use_unknown(data)
+
+    nr_occ_distrib_ok = get_number_of_occ_where_distrib_true(data)
+    nr_occ_distrib_notok = get_number_of_occ_where_distrib_false(data)
+    nr_occ_distrib_unknown = get_number_of_occ_where_distrib_unknown(data)
+
+    nr_occ_derivatives_ok = get_number_of_occ_where_deriv_true(data)
+    nr_occ_derivatives_notok = get_number_of_occ_where_deriv_false(data)
+    nr_occ_derivatives_unknown = get_number_of_occ_where_deriv_unknown(data)
+
+    nr_occ_commercial_ok = get_number_of_occ_where_commer_true(data)
+    nr_occ_commercial_notok = get_number_of_occ_where_commer_false(data)
+    nr_occ_commercial_unknown = get_number_of_occ_where_commer_unknown(data)
+
+    nr_occ_attrib_notok = get_number_of_occ_where_attrib_true(data)
+    nr_occ_attrib_ok = get_number_of_occ_where_attrib_false(data)
+    nr_occ_attrib_unknown = get_number_of_occ_where_attrib_unknown(data)
+
+    nr_occ_share_notok = get_number_of_occ_where_share_true(data)
+    nr_occ_share_ok = get_number_of_occ_where_share_false(data)
+    nr_occ_share_unknown = get_number_of_occ_where_share_unknown(data)
+
+    nr_occ_notific_notok = get_number_of_occ_where_notific_true(data)
+    nr_occ_notific_ok = get_number_of_occ_where_notific_false(data)
+    nr_occ_notific_unknown = get_number_of_occ_where_notific_unknown(data)
+
+    use_data = [
+        {'color': '#03AD0F', 'key': 'yes', 'values': [
+            {'label': 'usage', 'value': nr_occ_use_ok},
+	    {'label': 'distribution', 'value': nr_occ_distrib_ok},
+	    {'label': 'derivatives', 'value': nr_occ_derivatives_ok},
+	    {'label': 'commercial', 'value': nr_occ_commercial_ok},
+	    {'label': 'attribution', 'value': nr_occ_attrib_ok},
+	    {'label': 'share alike', 'value': nr_occ_share_ok},
+	    {'label': 'notification', 'value': nr_occ_notific_ok}
+	]},
+	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
+	    {'label': 'usage', 'value': nr_occ_use_unknown},
+	    {'label': 'distribution', 'value': nr_occ_distrib_unknown},
+	    {'label': 'derivatives', 'value': nr_occ_derivatives_unknown},
+	    {'label': 'commercial', 'value': nr_occ_commercial_unknown},
+	    {'label': 'attribution', 'value': nr_occ_attrib_unknown},
+	    {'label': 'share alike', 'value': nr_occ_share_unknown},
+	    {'label': 'notification', 'value': nr_occ_notific_unknown}
+	]},
+	{'color': '#ED0000', 'key': 'no', 'values': [
+	    {'label': 'usage', 'value': nr_occ_use_notok},
+	    {'label': 'distribution', 'value': nr_occ_distrib_notok},
+	    {'label': 'derivatives', 'value': nr_occ_derivatives_notok},
+	    {'label': 'commercial', 'value': nr_occ_commercial_notok},
+	    {'label': 'attribution', 'value': nr_occ_attrib_notok},
+	    {'label': 'share alike', 'value': nr_occ_share_notok},
+	    {'label': 'notification', 'value': nr_occ_notific_notok}
+	]}
+    ]
+    print 'parameters per occurrence'
     print use_data
 
 main()
