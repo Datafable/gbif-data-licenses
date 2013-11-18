@@ -45,3 +45,8 @@ This command will run the `unique_licenses.py` script. It will fetch the metadat
 * Unix make
 * Python
 * Python modules: requests
+
+## Requirements for the visualisations
+
+* nvd3: [download it](http://nvd3.org/statement.html), create a `lib` directory in the root directory of this project and put the untarred nvd3 (named `novus-nvd3-764767a`) in the `lib` folder.
+* Internet connection: the other libraries (jquery and d3) are loaded dynamically. Make sure you are connected to the internet.
