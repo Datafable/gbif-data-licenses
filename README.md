@@ -13,40 +13,16 @@ We want to get an overview of all data licenses used in GBIF registered datasets
 
 ## Results
 
-All licenses are written to [licenses.csv](/data/licenses.csv). Rerunning the scripts will append newly found licenses to the file.
-
-The licenses are manually interpreted in the form of `true`/`false`/`?` parameters using [these guidelines](guidelines.md) we created.
-
----
-
-## Content
-
-* [/code](./code): scripts to fetch all data licenses.
-* [/data](./data): output of the scripts and manual annotation.
-
-Use [blame](https://github.com/blog/228-playing-the-blame-game) to find out when they were generated or edited.
-
-## How to run the code
-
-### Fetch all dataset metadata from GBIF
-
-`make data/datasets.csv`
-
-This command will fetch all metadata from GBIF datasets and parse the dataset code and rights from it. The output will be written to the data folder.
-
-### Add new licenses to the licenses file
-
-`make data/licenses.csv`
-
-This command will run the `unique_licenses.py` script. It will fetch the metadata from the `data/datasets.csv` file, look for licenses that were not documented in `data/licenses.mkd` yet, and append these to the file. If the file `data/licenses.mkd` does not exist, it will be created.
+1. Metadata for all datasets is obtained via the [GBIF Registry API](http://www.gbif.org/developer/registry) and written to [datasets.csv](data/datasets.csv) [`make data/datasets.csv`]
+2. All unique licenses are written to [licenses.csv](data/licenses.csv). Rerunning the scripts will append newly found licenses to the file. [`make data/licenses.csv`]
+3. The [characteristics of the licenses](data/licenses.csv) are manually interpreted using [these guidelines](guidelines.md) we created.
+4. The annotated information is added back to [the datasets](data/datasets-annotated.csv).
+5. [Charts](http://datafable.github.io/gbif-data-licenses/charts/index.html) provide a visualization of the distribution of the licenses.
 
 ## Requirements
 
 * Unix make
 * Python
-* Python modules: requests
-
-## Requirements for the visualisations
-
-* nvd3: [download it](http://nvd3.org/statement.html), create a `lib` directory in the root directory of this project and put the untarred nvd3 (named `novus-nvd3-764767a`) in the `lib` folder.
-* Internet connection: the other libraries (jquery and d3) are loaded dynamically. Make sure you are connected to the internet.
+* requests
+* pandas
+* [nvd3](https://github.com/novus/nvd3): charts JS Library ([license](https://github.com/novus/nvd3/blob/master/LICENSE.md)) - included
