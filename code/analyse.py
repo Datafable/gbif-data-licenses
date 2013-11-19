@@ -6,6 +6,7 @@
 # That can be used for creating visualizations.
 #================================================
 
+import sys
 import pandas as pd
 import simplejson as json
 
@@ -398,7 +399,8 @@ def generate_pie_chart_html(chart_title, chart_data, plotnr):
 #----------------------------
 
 def main():
-    data = get_data('data/datasets-annotated.csv')
+    infile_annotated_datasets, infile_annotated_datasets_gbif_dua = sys.argv[1:]
+    data = get_data(infile_annotated_datasets)
     total_oc = get_total_nr_of_occurrences(data)
     nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
     nr_oc_no_std_lic = total_oc - nr_oc_std_lic
@@ -425,7 +427,7 @@ def main():
     outfile.write(json.dumps(analysis_json))
     outfile.close()
 
-    data = get_data('data/datasets-annotated-gbif.csv')
+    data = get_data(infile_annotated_datasets_gbif_dua)
 
     analysis_json = analyse_parameters_per_dataset(data)
     outfile = open('charts/data/parameters-per-dataset-gbif.json', 'w+')

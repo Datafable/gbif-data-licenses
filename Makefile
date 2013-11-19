@@ -12,3 +12,6 @@ data/datasets-annotated.csv: data/datasets.csv data/licenses.csv code/join_licen
 
 data/datasets-annotated-gbif-dua.csv: data/datasets.csv data/licenses-gbif-dua.csv code/join_licenses_data.py
 	./code/join_licenses_data.py data/datasets.csv data/licenses-gbif-dua.csv data/datasets-annotated-gbif-dua.csv
+
+analysis: code/analyse.py data/datasets-annotated.csv data/datasets-annotated-gbif-dua.csv
+	./code/analyse.py data/datasets-annotated.csv data/datasets-annotated-gbif-dua.csv
