@@ -260,7 +260,7 @@ def analyse_parameters_per_dataset(data):
     nr_ds_notific_unknown = get_number_of_datasets_where_notific_unknown(data)
 
     results_json = [
-        {'color': '#03AD0F', 'key': 'yes', 'values': [
+        {'color': '#27AE60', 'key': 'Open', 'values': [
             {'label': 'usage', 'value': int(nr_ds_use_ok)},
 	    {'label': 'distribution', 'value': int(nr_ds_distrib_ok)},
 	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_ok)},
@@ -269,7 +269,7 @@ def analyse_parameters_per_dataset(data):
 	    {'label': 'share alike', 'value': int(nr_ds_share_ok)},
 	    {'label': 'notification', 'value': int(nr_ds_notific_ok)}
 	]},
-	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
+	{'color': '#CCCCCC', 'key': 'Unclear', 'values': [
 	    {'label': 'usage', 'value': int(nr_ds_use_unknown)},
 	    {'label': 'distribution', 'value': int(nr_ds_distrib_unknown)},
 	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_unknown)},
@@ -278,7 +278,7 @@ def analyse_parameters_per_dataset(data):
 	    {'label': 'share alike', 'value': int(nr_ds_share_unknown)},
 	    {'label': 'notification', 'value': int(nr_ds_notific_unknown)}
 	]},
-	{'color': '#ED0000', 'key': 'no', 'values': [
+	{'color': '#C0392B', 'key': 'Restricted/Required', 'values': [
 	    {'label': 'usage', 'value': int(nr_ds_use_notok)},
 	    {'label': 'distribution', 'value': int(nr_ds_distrib_notok)},
 	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_notok)},
@@ -320,7 +320,7 @@ def analyse_parameters_per_occurrence(data):
     nr_occ_notific_unknown = get_number_of_occ_where_notific_unknown(data)
 
     results_json = [
-        {'color': '#03AD0F', 'key': 'yes', 'values': [
+        {'color': '#27AE60', 'key': 'Open', 'values': [
             {'label': 'usage', 'value': int(nr_occ_use_ok)},
 	    {'label': 'distribution', 'value': int(nr_occ_distrib_ok)},
 	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_ok)},
@@ -329,7 +329,7 @@ def analyse_parameters_per_occurrence(data):
 	    {'label': 'share alike', 'value': int(nr_occ_share_ok)},
 	    {'label': 'notification', 'value': int(nr_occ_notific_ok)}
 	]},
-	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
+	{'color': '#CCCCCC', 'key': 'Unclear', 'values': [
 	    {'label': 'usage', 'value': int(nr_occ_use_unknown)},
 	    {'label': 'distribution', 'value': int(nr_occ_distrib_unknown)},
 	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_unknown)},
@@ -338,7 +338,7 @@ def analyse_parameters_per_occurrence(data):
 	    {'label': 'share alike', 'value': int(nr_occ_share_unknown)},
 	    {'label': 'notification', 'value': int(nr_occ_notific_unknown)}
 	]},
-	{'color': '#ED0000', 'key': 'no', 'values': [
+	{'color': '#C0392B', 'key': 'Restricted/Required', 'values': [
 	    {'label': 'usage', 'value': int(nr_occ_use_notok)},
 	    {'label': 'distribution', 'value': int(nr_occ_distrib_notok)},
 	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_notok)},
