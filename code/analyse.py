@@ -7,7 +7,6 @@
 #================================================
 
 import pandas as pd
-from IPython import embed
 
 def get_data(infile):
     df = pd.read_csv(open(infile), sep=',', header=0)
