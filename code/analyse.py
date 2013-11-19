@@ -6,8 +6,9 @@
 # That can be used for creating visualizations.
 #================================================
 
+import sys
 import pandas as pd
-from IPython import embed
+import simplejson as json
 
 def get_data(infile):
     df = pd.read_csv(open(infile), sep=',', header=0)
@@ -228,6 +229,129 @@ def get_number_of_occ_where_notific_unknown(data):
     return subset_sum
 
 #----------------------------
+# Wrapper methods
+#----------------------------
+def analyse_parameters_per_dataset(data):
+    nr_ds_use_ok = get_number_of_datasets_where_use_true(data)
+    nr_ds_use_notok= get_number_of_datasets_where_use_false(data)
+    nr_ds_use_unknown = get_number_of_datasets_where_use_unknown(data)
+
+    nr_ds_distrib_ok = get_number_of_datasets_where_distrib_true(data)
+    nr_ds_distrib_notok = get_number_of_datasets_where_distrib_false(data)
+    nr_ds_distrib_unknown = get_number_of_datasets_where_distrib_unknown(data)
+
+    nr_ds_derivatives_ok = get_number_of_datasets_where_deriv_true(data)
+    nr_ds_derivatives_notok = get_number_of_datasets_where_deriv_false(data)
+    nr_ds_derivatives_unknown = get_number_of_datasets_where_deriv_unknown(data)
+
+    nr_ds_commercial_ok = get_number_of_datasets_where_commer_true(data)
+    nr_ds_commercial_notok = get_number_of_datasets_where_commer_false(data)
+    nr_ds_commercial_unknown = get_number_of_datasets_where_commer_unknown(data)
+
+    nr_ds_attrib_notok = get_number_of_datasets_where_attrib_true(data)
+    nr_ds_attrib_ok = get_number_of_datasets_where_attrib_false(data)
+    nr_ds_attrib_unknown = get_number_of_datasets_where_attrib_unknown(data)
+
+    nr_ds_share_notok = get_number_of_datasets_where_share_true(data)
+    nr_ds_share_ok = get_number_of_datasets_where_share_false(data)
+    nr_ds_share_unknown = get_number_of_datasets_where_share_unknown(data)
+
+    nr_ds_notific_notok = get_number_of_datasets_where_notific_true(data)
+    nr_ds_notific_ok = get_number_of_datasets_where_notific_false(data)
+    nr_ds_notific_unknown = get_number_of_datasets_where_notific_unknown(data)
+
+    results_json = [
+        {'color': '#27AE60', 'key': 'Open', 'values': [
+            {'label': 'usage', 'value': int(nr_ds_use_ok)},
+	    {'label': 'distribution', 'value': int(nr_ds_distrib_ok)},
+	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_ok)},
+	    {'label': 'commercial', 'value': int(nr_ds_commercial_ok)},
+	    {'label': 'attribution', 'value': int(nr_ds_attrib_ok)},
+	    {'label': 'share alike', 'value': int(nr_ds_share_ok)},
+	    {'label': 'notification', 'value': int(nr_ds_notific_ok)}
+	]},
+	{'color': '#CCCCCC', 'key': 'Unclear', 'values': [
+	    {'label': 'usage', 'value': int(nr_ds_use_unknown)},
+	    {'label': 'distribution', 'value': int(nr_ds_distrib_unknown)},
+	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_unknown)},
+	    {'label': 'commercial', 'value': int(nr_ds_commercial_unknown)},
+	    {'label': 'attribution', 'value': int(nr_ds_attrib_unknown)},
+	    {'label': 'share alike', 'value': int(nr_ds_share_unknown)},
+	    {'label': 'notification', 'value': int(nr_ds_notific_unknown)}
+	]},
+	{'color': '#C0392B', 'key': 'Restricted/Required', 'values': [
+	    {'label': 'usage', 'value': int(nr_ds_use_notok)},
+	    {'label': 'distribution', 'value': int(nr_ds_distrib_notok)},
+	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_notok)},
+	    {'label': 'commercial', 'value': int(nr_ds_commercial_notok)},
+	    {'label': 'attribution', 'value': int(nr_ds_attrib_notok)},
+	    {'label': 'share alike', 'value': int(nr_ds_share_notok)},
+	    {'label': 'notification', 'value': int(nr_ds_notific_notok)}
+	]}
+    ]
+    return results_json
+
+def analyse_parameters_per_occurrence(data):
+    nr_occ_use_ok = get_number_of_occ_where_use_true(data)
+    nr_occ_use_notok= get_number_of_occ_where_use_false(data)
+    nr_occ_use_unknown = get_number_of_occ_where_use_unknown(data)
+
+    nr_occ_distrib_ok = get_number_of_occ_where_distrib_true(data)
+    nr_occ_distrib_notok = get_number_of_occ_where_distrib_false(data)
+    nr_occ_distrib_unknown = get_number_of_occ_where_distrib_unknown(data)
+
+    nr_occ_derivatives_ok = get_number_of_occ_where_deriv_true(data)
+    nr_occ_derivatives_notok = get_number_of_occ_where_deriv_false(data)
+    nr_occ_derivatives_unknown = get_number_of_occ_where_deriv_unknown(data)
+
+    nr_occ_commercial_ok = get_number_of_occ_where_commer_true(data)
+    nr_occ_commercial_notok = get_number_of_occ_where_commer_false(data)
+    nr_occ_commercial_unknown = get_number_of_occ_where_commer_unknown(data)
+
+    nr_occ_attrib_notok = get_number_of_occ_where_attrib_true(data)
+    nr_occ_attrib_ok = get_number_of_occ_where_attrib_false(data)
+    nr_occ_attrib_unknown = get_number_of_occ_where_attrib_unknown(data)
+
+    nr_occ_share_notok = get_number_of_occ_where_share_true(data)
+    nr_occ_share_ok = get_number_of_occ_where_share_false(data)
+    nr_occ_share_unknown = get_number_of_occ_where_share_unknown(data)
+
+    nr_occ_notific_notok = get_number_of_occ_where_notific_true(data)
+    nr_occ_notific_ok = get_number_of_occ_where_notific_false(data)
+    nr_occ_notific_unknown = get_number_of_occ_where_notific_unknown(data)
+
+    results_json = [
+        {'color': '#27AE60', 'key': 'Open', 'values': [
+            {'label': 'usage', 'value': int(nr_occ_use_ok)},
+	    {'label': 'distribution', 'value': int(nr_occ_distrib_ok)},
+	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_ok)},
+	    {'label': 'commercial', 'value': int(nr_occ_commercial_ok)},
+	    {'label': 'attribution', 'value': int(nr_occ_attrib_ok)},
+	    {'label': 'share alike', 'value': int(nr_occ_share_ok)},
+	    {'label': 'notification', 'value': int(nr_occ_notific_ok)}
+	]},
+	{'color': '#CCCCCC', 'key': 'Unclear', 'values': [
+	    {'label': 'usage', 'value': int(nr_occ_use_unknown)},
+	    {'label': 'distribution', 'value': int(nr_occ_distrib_unknown)},
+	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_unknown)},
+	    {'label': 'commercial', 'value': int(nr_occ_commercial_unknown)},
+	    {'label': 'attribution', 'value': int(nr_occ_attrib_unknown)},
+	    {'label': 'share alike', 'value': int(nr_occ_share_unknown)},
+	    {'label': 'notification', 'value': int(nr_occ_notific_unknown)}
+	]},
+	{'color': '#C0392B', 'key': 'Restricted/Required', 'values': [
+	    {'label': 'usage', 'value': int(nr_occ_use_notok)},
+	    {'label': 'distribution', 'value': int(nr_occ_distrib_notok)},
+	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_notok)},
+	    {'label': 'commercial', 'value': int(nr_occ_commercial_notok)},
+	    {'label': 'attribution', 'value': int(nr_occ_attrib_notok)},
+	    {'label': 'share alike', 'value': int(nr_occ_share_notok)},
+	    {'label': 'notification', 'value': int(nr_occ_notific_notok)}
+	]}
+    ]
+    return results_json
+
+#----------------------------
 # Methods for printing html
 #----------------------------
 def get_html_header():
@@ -275,140 +399,44 @@ def generate_pie_chart_html(chart_title, chart_data, plotnr):
 #----------------------------
 
 def main():
-    data = get_data('data/joined_data.csv')
+    infile_annotated_datasets, infile_annotated_datasets_gbif_dua = sys.argv[1:]
+    data = get_data(infile_annotated_datasets)
     total_oc = get_total_nr_of_occurrences(data)
     nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
     nr_oc_no_std_lic = total_oc - nr_oc_std_lic
-    license_data = {'key': 'occurrences', 'values': [{'label': 'standard license', 'value': nr_oc_std_lic}, {'label': 'no standard license', 'value': nr_oc_no_std_lic}]}
-    print license_data
+    license_data = [{'label': 'Standard license', 'value': int(nr_oc_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_oc_no_std_lic), 'color': '#CCCCCC'}]
+    outfile = open('charts/data/standard-license-occurrences.json', 'w+')
+    outfile.write(json.dumps(license_data))
+    outfile.close()
 
     total_nr_ds = get_total_nr_of_datasets(data)
     nr_ds_std_lic = get_nr_of_datasets_with_standard_license(data)
     nr_ds_no_std_lic = total_nr_ds - nr_ds_std_lic
-    license_data = {'key': 'datasets', 'values': [{'label': 'standard license', 'value': nr_ds_std_lic}, {'label': 'no standard license', 'value': nr_ds_no_std_lic}]}
-    print license_data
+    license_data = [{'label': 'Standard license', 'value': int(nr_ds_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_ds_no_std_lic), 'color': '#CCCCCC'}]
+    outfile = open('charts/data/standard-license-datasets.json', 'w+')
+    outfile.write(json.dumps(license_data))
+    outfile.close()
 
-# Analyse parameters per dataset
-    nr_ds_use_ok = get_number_of_datasets_where_use_true(data)
-    nr_ds_use_notok= get_number_of_datasets_where_use_false(data)
-    nr_ds_use_unknown = get_number_of_datasets_where_use_unknown(data)
+    analysis_json = analyse_parameters_per_dataset(data)
+    outfile = open('charts/data/parameters-per-dataset.json', 'w+')
+    outfile.write(json.dumps(analysis_json))
+    outfile.close()
 
-    nr_ds_distrib_ok = get_number_of_datasets_where_distrib_true(data)
-    nr_ds_distrib_notok = get_number_of_datasets_where_distrib_false(data)
-    nr_ds_distrib_unknown = get_number_of_datasets_where_distrib_unknown(data)
+    analysis_json = analyse_parameters_per_occurrence(data)
+    outfile = open('charts/data/parameters-per-occurrence.json', 'w+')
+    outfile.write(json.dumps(analysis_json))
+    outfile.close()
 
-    nr_ds_derivatives_ok = get_number_of_datasets_where_deriv_true(data)
-    nr_ds_derivatives_notok = get_number_of_datasets_where_deriv_false(data)
-    nr_ds_derivatives_unknown = get_number_of_datasets_where_deriv_unknown(data)
+    data = get_data(infile_annotated_datasets_gbif_dua)
 
-    nr_ds_commercial_ok = get_number_of_datasets_where_commer_true(data)
-    nr_ds_commercial_notok = get_number_of_datasets_where_commer_false(data)
-    nr_ds_commercial_unknown = get_number_of_datasets_where_commer_unknown(data)
+    analysis_json = analyse_parameters_per_dataset(data)
+    outfile = open('charts/data/parameters-per-dataset-gbif-dua.json', 'w+')
+    outfile.write(json.dumps(analysis_json))
+    outfile.close()
 
-    nr_ds_attrib_notok = get_number_of_datasets_where_attrib_true(data)
-    nr_ds_attrib_ok = get_number_of_datasets_where_attrib_false(data)
-    nr_ds_attrib_unknown = get_number_of_datasets_where_attrib_unknown(data)
-
-    nr_ds_share_notok = get_number_of_datasets_where_share_true(data)
-    nr_ds_share_ok = get_number_of_datasets_where_share_false(data)
-    nr_ds_share_unknown = get_number_of_datasets_where_share_unknown(data)
-
-    nr_ds_notific_notok = get_number_of_datasets_where_notific_true(data)
-    nr_ds_notific_ok = get_number_of_datasets_where_notific_false(data)
-    nr_ds_notific_unknown = get_number_of_datasets_where_notific_unknown(data)
-
-
-    use_data = [
-        {'color': '#03AD0F', 'key': 'yes', 'values': [
-            {'label': 'usage', 'value': nr_ds_use_ok},
-	    {'label': 'distribution', 'value': nr_ds_distrib_ok},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_ok},
-	    {'label': 'commercial', 'value': nr_ds_commercial_ok},
-	    {'label': 'attribution', 'value': nr_ds_attrib_ok},
-	    {'label': 'share alike', 'value': nr_ds_share_ok},
-	    {'label': 'notification', 'value': nr_ds_notific_ok}
-	]},
-	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
-	    {'label': 'usage', 'value': nr_ds_use_unknown},
-	    {'label': 'distribution', 'value': nr_ds_distrib_unknown},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_unknown},
-	    {'label': 'commercial', 'value': nr_ds_commercial_unknown},
-	    {'label': 'attribution', 'value': nr_ds_attrib_unknown},
-	    {'label': 'share alike', 'value': nr_ds_share_unknown},
-	    {'label': 'notification', 'value': nr_ds_notific_unknown}
-	]},
-	{'color': '#ED0000', 'key': 'no', 'values': [
-	    {'label': 'usage', 'value': nr_ds_use_notok},
-	    {'label': 'distribution', 'value': nr_ds_distrib_notok},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_notok},
-	    {'label': 'commercial', 'value': nr_ds_commercial_notok},
-	    {'label': 'attribution', 'value': nr_ds_attrib_notok},
-	    {'label': 'share alike', 'value': nr_ds_share_notok},
-	    {'label': 'notification', 'value': nr_ds_notific_notok}
-	]}
-    ]
-    print 'usage per dataset'
-    print use_data
-
-# Analyse parameters per occurrence
-    nr_occ_use_ok = get_number_of_occ_where_use_true(data)
-    nr_occ_use_notok= get_number_of_occ_where_use_false(data)
-    nr_occ_use_unknown = get_number_of_occ_where_use_unknown(data)
-
-    nr_occ_distrib_ok = get_number_of_occ_where_distrib_true(data)
-    nr_occ_distrib_notok = get_number_of_occ_where_distrib_false(data)
-    nr_occ_distrib_unknown = get_number_of_occ_where_distrib_unknown(data)
-
-    nr_occ_derivatives_ok = get_number_of_occ_where_deriv_true(data)
-    nr_occ_derivatives_notok = get_number_of_occ_where_deriv_false(data)
-    nr_occ_derivatives_unknown = get_number_of_occ_where_deriv_unknown(data)
-
-    nr_occ_commercial_ok = get_number_of_occ_where_commer_true(data)
-    nr_occ_commercial_notok = get_number_of_occ_where_commer_false(data)
-    nr_occ_commercial_unknown = get_number_of_occ_where_commer_unknown(data)
-
-    nr_occ_attrib_notok = get_number_of_occ_where_attrib_true(data)
-    nr_occ_attrib_ok = get_number_of_occ_where_attrib_false(data)
-    nr_occ_attrib_unknown = get_number_of_occ_where_attrib_unknown(data)
-
-    nr_occ_share_notok = get_number_of_occ_where_share_true(data)
-    nr_occ_share_ok = get_number_of_occ_where_share_false(data)
-    nr_occ_share_unknown = get_number_of_occ_where_share_unknown(data)
-
-    nr_occ_notific_notok = get_number_of_occ_where_notific_true(data)
-    nr_occ_notific_ok = get_number_of_occ_where_notific_false(data)
-    nr_occ_notific_unknown = get_number_of_occ_where_notific_unknown(data)
-
-    use_data = [
-        {'color': '#03AD0F', 'key': 'yes', 'values': [
-            {'label': 'usage', 'value': nr_occ_use_ok},
-	    {'label': 'distribution', 'value': nr_occ_distrib_ok},
-	    {'label': 'derivatives', 'value': nr_occ_derivatives_ok},
-	    {'label': 'commercial', 'value': nr_occ_commercial_ok},
-	    {'label': 'attribution', 'value': nr_occ_attrib_ok},
-	    {'label': 'share alike', 'value': nr_occ_share_ok},
-	    {'label': 'notification', 'value': nr_occ_notific_ok}
-	]},
-	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
-	    {'label': 'usage', 'value': nr_occ_use_unknown},
-	    {'label': 'distribution', 'value': nr_occ_distrib_unknown},
-	    {'label': 'derivatives', 'value': nr_occ_derivatives_unknown},
-	    {'label': 'commercial', 'value': nr_occ_commercial_unknown},
-	    {'label': 'attribution', 'value': nr_occ_attrib_unknown},
-	    {'label': 'share alike', 'value': nr_occ_share_unknown},
-	    {'label': 'notification', 'value': nr_occ_notific_unknown}
-	]},
-	{'color': '#ED0000', 'key': 'no', 'values': [
-	    {'label': 'usage', 'value': nr_occ_use_notok},
-	    {'label': 'distribution', 'value': nr_occ_distrib_notok},
-	    {'label': 'derivatives', 'value': nr_occ_derivatives_notok},
-	    {'label': 'commercial', 'value': nr_occ_commercial_notok},
-	    {'label': 'attribution', 'value': nr_occ_attrib_notok},
-	    {'label': 'share alike', 'value': nr_occ_share_notok},
-	    {'label': 'notification', 'value': nr_occ_notific_notok}
-	]}
-    ]
-    print 'parameters per occurrence'
-    print use_data
+    analysis_json = analyse_parameters_per_occurrence(data)
+    outfile = open('charts/data/parameters-per-occurrence-gbif-dua.json', 'w+')
+    outfile.write(json.dumps(analysis_json))
+    outfile.close()
 
 main()
