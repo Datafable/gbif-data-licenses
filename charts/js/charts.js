@@ -1,13 +1,11 @@
-// Hard coded data
-
-var standard_licenses_datasets = [{"label": "Standard license","color":"#27AE60","value": 166}, {"label": "Non-standard license","color":"#CCCCCC","value": 11806}];
-var standard_licenses_occurrences = [{"label": "Standard license","color":"#27AE60","value": 9899370}, {"label": "Non-standard license","color":"#CCCCCC","value": 405513274}];
-
 // Add charts to HTML
 
-addPieChart("#chart1","Datasets",standard_licenses_datasets);
-addPieChart("#chart2","Occurrences",standard_licenses_occurrences);
-
+d3.json("data/standard-license-datasets.json", function (data) {
+    addPieChart("#chart1","Datasets",data);
+});
+d3.json("data/standard-license-occurrences.json", function (data) {
+    addPieChart("#chart2","Occurrences",data);
+});
 d3.json("data/parameters-per-dataset.json", function (data) {
     addMultiHorizontalBarChart("#chart3","Datasets",data);
 });
