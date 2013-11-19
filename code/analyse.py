@@ -7,6 +7,7 @@
 #================================================
 
 import pandas as pd
+import simplejson as json
 
 def get_data(infile):
     df = pd.read_csv(open(infile), sep=',', header=0)
@@ -260,31 +261,31 @@ def analyse_parameters_per_dataset(data):
 
     results_json = [
         {'color': '#03AD0F', 'key': 'yes', 'values': [
-            {'label': 'usage', 'value': nr_ds_use_ok},
-	    {'label': 'distribution', 'value': nr_ds_distrib_ok},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_ok},
-	    {'label': 'commercial', 'value': nr_ds_commercial_ok},
-	    {'label': 'attribution', 'value': nr_ds_attrib_ok},
-	    {'label': 'share alike', 'value': nr_ds_share_ok},
-	    {'label': 'notification', 'value': nr_ds_notific_ok}
+            {'label': 'usage', 'value': int(nr_ds_use_ok)},
+	    {'label': 'distribution', 'value': int(nr_ds_distrib_ok)},
+	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_ok)},
+	    {'label': 'commercial', 'value': int(nr_ds_commercial_ok)},
+	    {'label': 'attribution', 'value': int(nr_ds_attrib_ok)},
+	    {'label': 'share alike', 'value': int(nr_ds_share_ok)},
+	    {'label': 'notification', 'value': int(nr_ds_notific_ok)}
 	]},
 	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
-	    {'label': 'usage', 'value': nr_ds_use_unknown},
-	    {'label': 'distribution', 'value': nr_ds_distrib_unknown},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_unknown},
-	    {'label': 'commercial', 'value': nr_ds_commercial_unknown},
-	    {'label': 'attribution', 'value': nr_ds_attrib_unknown},
-	    {'label': 'share alike', 'value': nr_ds_share_unknown},
-	    {'label': 'notification', 'value': nr_ds_notific_unknown}
+	    {'label': 'usage', 'value': int(nr_ds_use_unknown)},
+	    {'label': 'distribution', 'value': int(nr_ds_distrib_unknown)},
+	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_unknown)},
+	    {'label': 'commercial', 'value': int(nr_ds_commercial_unknown)},
+	    {'label': 'attribution', 'value': int(nr_ds_attrib_unknown)},
+	    {'label': 'share alike', 'value': int(nr_ds_share_unknown)},
+	    {'label': 'notification', 'value': int(nr_ds_notific_unknown)}
 	]},
 	{'color': '#ED0000', 'key': 'no', 'values': [
-	    {'label': 'usage', 'value': nr_ds_use_notok},
-	    {'label': 'distribution', 'value': nr_ds_distrib_notok},
-	    {'label': 'derivatives', 'value': nr_ds_derivatives_notok},
-	    {'label': 'commercial', 'value': nr_ds_commercial_notok},
-	    {'label': 'attribution', 'value': nr_ds_attrib_notok},
-	    {'label': 'share alike', 'value': nr_ds_share_notok},
-	    {'label': 'notification', 'value': nr_ds_notific_notok}
+	    {'label': 'usage', 'value': int(nr_ds_use_notok)},
+	    {'label': 'distribution', 'value': int(nr_ds_distrib_notok)},
+	    {'label': 'derivatives', 'value': int(nr_ds_derivatives_notok)},
+	    {'label': 'commercial', 'value': int(nr_ds_commercial_notok)},
+	    {'label': 'attribution', 'value': int(nr_ds_attrib_notok)},
+	    {'label': 'share alike', 'value': int(nr_ds_share_notok)},
+	    {'label': 'notification', 'value': int(nr_ds_notific_notok)}
 	]}
     ]
     return results_json
@@ -320,31 +321,31 @@ def analyse_parameters_per_occurrence(data):
 
     results_json = [
         {'color': '#03AD0F', 'key': 'yes', 'values': [
-            {'label': 'usage', 'value': nr_occ_use_ok},
-	    {'label': 'distribution', 'value': nr_occ_distrib_ok},
-	    {'label': 'derivatives', 'value': nr_occ_derivatives_ok},
-	    {'label': 'commercial', 'value': nr_occ_commercial_ok},
-	    {'label': 'attribution', 'value': nr_occ_attrib_ok},
-	    {'label': 'share alike', 'value': nr_occ_share_ok},
-	    {'label': 'notification', 'value': nr_occ_notific_ok}
+            {'label': 'usage', 'value': int(nr_occ_use_ok)},
+	    {'label': 'distribution', 'value': int(nr_occ_distrib_ok)},
+	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_ok)},
+	    {'label': 'commercial', 'value': int(nr_occ_commercial_ok)},
+	    {'label': 'attribution', 'value': int(nr_occ_attrib_ok)},
+	    {'label': 'share alike', 'value': int(nr_occ_share_ok)},
+	    {'label': 'notification', 'value': int(nr_occ_notific_ok)}
 	]},
 	{'color': '#9E9E9E', 'key': 'unknown', 'values': [
-	    {'label': 'usage', 'value': nr_occ_use_unknown},
-	    {'label': 'distribution', 'value': nr_occ_distrib_unknown},
-	    {'label': 'derivatives', 'value': nr_occ_derivatives_unknown},
-	    {'label': 'commercial', 'value': nr_occ_commercial_unknown},
-	    {'label': 'attribution', 'value': nr_occ_attrib_unknown},
-	    {'label': 'share alike', 'value': nr_occ_share_unknown},
-	    {'label': 'notification', 'value': nr_occ_notific_unknown}
+	    {'label': 'usage', 'value': int(nr_occ_use_unknown)},
+	    {'label': 'distribution', 'value': int(nr_occ_distrib_unknown)},
+	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_unknown)},
+	    {'label': 'commercial', 'value': int(nr_occ_commercial_unknown)},
+	    {'label': 'attribution', 'value': int(nr_occ_attrib_unknown)},
+	    {'label': 'share alike', 'value': int(nr_occ_share_unknown)},
+	    {'label': 'notification', 'value': int(nr_occ_notific_unknown)}
 	]},
 	{'color': '#ED0000', 'key': 'no', 'values': [
-	    {'label': 'usage', 'value': nr_occ_use_notok},
-	    {'label': 'distribution', 'value': nr_occ_distrib_notok},
-	    {'label': 'derivatives', 'value': nr_occ_derivatives_notok},
-	    {'label': 'commercial', 'value': nr_occ_commercial_notok},
-	    {'label': 'attribution', 'value': nr_occ_attrib_notok},
-	    {'label': 'share alike', 'value': nr_occ_share_notok},
-	    {'label': 'notification', 'value': nr_occ_notific_notok}
+	    {'label': 'usage', 'value': int(nr_occ_use_notok)},
+	    {'label': 'distribution', 'value': int(nr_occ_distrib_notok)},
+	    {'label': 'derivatives', 'value': int(nr_occ_derivatives_notok)},
+	    {'label': 'commercial', 'value': int(nr_occ_commercial_notok)},
+	    {'label': 'attribution', 'value': int(nr_occ_attrib_notok)},
+	    {'label': 'share alike', 'value': int(nr_occ_share_notok)},
+	    {'label': 'notification', 'value': int(nr_occ_notific_notok)}
 	]}
     ]
     return results_json
@@ -412,24 +413,24 @@ def main():
 
     analysis_json = analyse_parameters_per_dataset(data)
     outfile = open('charts/data/parameters-per-dataset.json', 'w+')
-    outfile.write(str(analysis_json))
+    outfile.write(json.dumps(analysis_json))
     outfile.close()
 
     analysis_json = analyse_parameters_per_occurrence(data)
     outfile = open('charts/data/parameters-per-occurrence.json', 'w+')
-    outfile.write(str(analysis_json))
+    outfile.write(json.dumps(analysis_json))
     outfile.close()
 
     data = get_data('data/datasets-annotated-gbif.csv')
 
     analysis_json = analyse_parameters_per_dataset(data)
     outfile = open('charts/data/parameters-per-dataset-gbif.json', 'w+')
-    outfile.write(str(analysis_json))
+    outfile.write(json.dumps(analysis_json))
     outfile.close()
 
     analysis_json = analyse_parameters_per_occurrence(data)
     outfile = open('charts/data/parameters-per-occurrence-gbif.json', 'w+')
-    outfile.write(str(analysis_json))
+    outfile.write(json.dumps(analysis_json))
     outfile.close()
 
 main()
