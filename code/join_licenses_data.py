@@ -9,6 +9,13 @@ def check_arguments():
 	sys.exit(-1)
     return sys.argv[1:]
 
+def license_is_annotated(annotations):
+    annotated = False
+    for annotation in annotations:
+        if annotation != '':
+            annotated = True
+    return annotated
+
 def read_annotated_licenses(infile):
     licenses = {}
     with open(infile) as f:
@@ -17,7 +24,10 @@ def read_annotated_licenses(infile):
 	for row in reader:
 	    annotations = row[0:8]
 	    license_text = row[8]
-	    licenses[license_text] = annotations
+            if license_is_annotated(annotations):
+                licenses[license_text] = annotations
+            else:
+                print 'There are unannotated licenses in your licenses file. These will be ignored for furthere analysis'
     return licenses
 
 def read_datasets(infile):
@@ -35,8 +45,9 @@ def write_annotation_per_dataset(datasets_list, ann_licenses_dict, outfile):
         writer.writerow(['key','owningOrganizationKey','numberOfOccurrences','rights','standard license','use','distribution','derivatives','commercial','attribution','share alike','notification'])
 	for dataset in datasets_list:
 	    license = dataset[-1]
-	    license_annotations = ann_licenses_dict[license]
-	    writer.writerow(dataset + license_annotations)
+            if license in ann_licenses_dict.keys():
+                license_annotations = ann_licenses_dict[license]
+                writer.writerow(dataset + license_annotations)
     return True
 
 def main():
