@@ -1,17 +1,27 @@
+body {
+    font-family: "Lucida grande", sans-serif;
+    margin: 2em;
+}
 .chart {
-        /*background: #F0F0F0;*/
-    }
-    .chart svg {
+        display: block;
         height: 300px;
         width: 100%;
-        }
-        .chart svg text {
-            font-family: "Open Sans", sans-serif;
-        }
-        .chart svg .title {
-            font-weight: bold;
-        }
-    .two-charts svg {
-        float: left;
-        width: 50%;
+    }
+    .chart text {
+        font-family: inherit;
+    }
+    .chart .title {
+        font-weight: bold;
+    }
+
+.clearfix {
+    *zoom: 1; /* For IE 6/7 only: include this rule to trigger hasLayout and contain floats. */
+    }
+    .clearfix:before,
+    .clearfix:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    .clearfix:after {
+        clear: both;
     }

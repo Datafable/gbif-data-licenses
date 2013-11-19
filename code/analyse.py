@@ -275,7 +275,7 @@ def generate_pie_chart_html(chart_title, chart_data, plotnr):
 #----------------------------
 
 def main():
-    data = get_data('data/joined_data.csv')
+    data = get_data('data/datasets-annotated.csv')
     total_oc = get_total_nr_of_occurrences(data)
     nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
     nr_oc_no_std_lic = total_oc - nr_oc_std_lic
