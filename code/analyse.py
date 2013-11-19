@@ -411,11 +411,25 @@ def main():
     print license_data
 
     analysis_json = analyse_parameters_per_dataset(data)
-    print 'usage per dataset'
-    print analysis_json
+    outfile = open('charts/data/parameters-per-dataset.json', 'w+')
+    outfile.write(str(analysis_json))
+    outfile.close()
 
     analysis_json = analyse_parameters_per_occurrence(data)
-    print 'parameters per occurrence'
-    print analysis_json
+    outfile = open('charts/data/parameters-per-occurrence.json', 'w+')
+    outfile.write(str(analysis_json))
+    outfile.close()
+
+    data = get_data('data/datasets-annotated-gbif.csv')
+
+    analysis_json = analyse_parameters_per_dataset(data)
+    outfile = open('charts/data/parameters-per-dataset-gbif.json', 'w+')
+    outfile.write(str(analysis_json))
+    outfile.close()
+
+    analysis_json = analyse_parameters_per_occurrence(data)
+    outfile = open('charts/data/parameters-per-occurrence-gbif.json', 'w+')
+    outfile.write(str(analysis_json))
+    outfile.close()
 
 main()
