@@ -402,14 +402,18 @@ def main():
     total_oc = get_total_nr_of_occurrences(data)
     nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
     nr_oc_no_std_lic = total_oc - nr_oc_std_lic
-    license_data = {'key': 'occurrences', 'values': [{'label': 'standard license', 'value': nr_oc_std_lic}, {'label': 'no standard license', 'value': nr_oc_no_std_lic}]}
-    print license_data
+    license_data = [{'label': 'Standard license', 'value': int(nr_oc_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_oc_no_std_lic), 'color': '#CCCCCC'}]
+    outfile = open('charts/data/standard-license-occurrences.json', 'w+')
+    outfile.write(json.dumps(license_data))
+    outfile.close()
 
     total_nr_ds = get_total_nr_of_datasets(data)
     nr_ds_std_lic = get_nr_of_datasets_with_standard_license(data)
     nr_ds_no_std_lic = total_nr_ds - nr_ds_std_lic
-    license_data = {'key': 'datasets', 'values': [{'label': 'standard license', 'value': nr_ds_std_lic}, {'label': 'no standard license', 'value': nr_ds_no_std_lic}]}
-    print license_data
+    license_data = [{'label': 'Standard license', 'value': int(nr_ds_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_ds_no_std_lic), 'color': '#CCCCCC'}]
+    outfile = open('charts/data/standard-license-datasets.json', 'w+')
+    outfile.write(json.dumps(license_data))
+    outfile.close()
 
     analysis_json = analyse_parameters_per_dataset(data)
     outfile = open('charts/data/parameters-per-dataset.json', 'w+')
