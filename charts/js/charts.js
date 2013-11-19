@@ -12,10 +12,10 @@ d3.json("data/parameters-per-dataset.json", function (data) {
 d3.json("data/parameters-per-occurrence.json", function(data) {
     addMultiHorizontalBarChart("#chart4","Occurrences",data);
 });
-d3.json("data/parameters-per-dataset-gbif.json", function(data) {
+d3.json("data/parameters-per-dataset-gbif-dua.json", function(data) {
     addMultiHorizontalBarChart("#chart5","Datasets",data);
 });
-d3.json("data/parameters-per-occurrence-gbif.json", function(data) {
+d3.json("data/parameters-per-occurrence-gbif-dua.json", function(data) {
     addMultiHorizontalBarChart("#chart6","Occurrences",data);
 });
 

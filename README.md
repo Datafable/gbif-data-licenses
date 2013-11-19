@@ -13,10 +13,10 @@ We want to get an overview of all data licenses used in GBIF registered datasets
 
 ## Results
 
-1. Metadata for all datasets is obtained via the [GBIF Registry API](http://www.gbif.org/developer/registry) and written to [datasets.csv](data/datasets.csv) [`make data/datasets.csv`]
+1. Metadata for all datasets is obtained via the [GBIF Registry API](http://www.gbif.org/developer/registry) and written to [datasets.csv](data/generated/datasets.csv) [`make data/generated/datasets.csv`]
 2. All unique licenses are written to [licenses.csv](data/licenses.csv). Rerunning the scripts will append newly found licenses to the file. [`make data/licenses.csv`]
 3. The [characteristics of the licenses](data/licenses.csv) are manually interpreted using [these guidelines](guidelines.md) we created.
-4. The annotated information is added back to [the datasets](data/datasets-annotated.csv).
+4. The annotated information is added back to [the datasets](data/generated/datasets-annotated.csv).
 5. [Charts](http://datafable.github.io/gbif-data-licenses/charts/index.html) provide a visualization of the distribution of the licenses.
 
 ## Requirements

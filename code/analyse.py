@@ -430,12 +430,12 @@ def main():
     data = get_data(infile_annotated_datasets_gbif_dua)
 
     analysis_json = analyse_parameters_per_dataset(data)
-    outfile = open('charts/data/parameters-per-dataset-gbif.json', 'w+')
+    outfile = open('charts/data/parameters-per-dataset-gbif-dua.json', 'w+')
     outfile.write(json.dumps(analysis_json))
     outfile.close()
 
     analysis_json = analyse_parameters_per_occurrence(data)
-    outfile = open('charts/data/parameters-per-occurrence-gbif.json', 'w+')
+    outfile = open('charts/data/parameters-per-occurrence-gbif-dua.json', 'w+')
     outfile.write(json.dumps(analysis_json))
     outfile.close()
 
