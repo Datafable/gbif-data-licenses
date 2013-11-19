@@ -13,5 +13,5 @@ data/generated/datasets-annotated.csv: data/generated/datasets.csv data/licenses
 data/generated/datasets-annotated-gbif-dua.csv: data/generated/datasets.csv data/generated/licenses-gbif-dua.csv code/join_licenses_data.py
 	./code/join_licenses_data.py data/generated/datasets.csv data/generated/licenses-gbif-dua.csv data/generated/datasets-annotated-gbif-dua.csv
 
-analysis: code/analyse.py data/datasets-annotated.csv data/datasets-annotated-gbif-dua.csv
-	./code/analyse.py data/datasets-annotated.csv data/datasets-annotated-gbif-dua.csv
+analysis: code/analyse.py data/generated/datasets-annotated.csv data/generated/datasets-annotated-gbif-dua.csv
+	./code/analyse.py data/generated/datasets-annotated.csv data/generated/datasets-annotated-gbif-dua.csv
