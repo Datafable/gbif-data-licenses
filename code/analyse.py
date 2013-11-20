@@ -16,21 +16,31 @@ def get_data(infile):
 
 def get_total_nr_of_occurrences(data):
     total_sum = data['numberOfOccurrences'].apply(int).sum()
-    print 'total number of occurrences: {0}'.format(total_sum)
+    #print 'total number of occurrences: {0}'.format(total_sum)
     return total_sum
 
 def get_total_nr_of_datasets(data):
     total = len(data)
     return total
 
+def get_nr_of_datasets_with_no_license(data):
+    subset = data[data['rights'].isnull()]
+    return len(subset)
+
 def get_nr_of_datasets_with_standard_license(data):
     subset = data[data['standard license'].notnull()]
     return len(subset)
 
+def nr_of_occurrences_with_no_license(data):
+    subset = data[data['rights'].isnull()]
+    subset_sum = subset['numberOfOccurrences'].apply(int).sum()
+    #print 'number of occurrences with no license: {0}'.format(subset_sum)
+    return subset_sum
+
 def nr_of_occurrences_with_standard_license(data):
     subset = data[data['standard license'].notnull()]
     subset_sum = subset['numberOfOccurrences'].apply(int).sum()
-    print 'number of occurrences with standard licenses: {0}'.format(subset_sum)
+    #print 'number of occurrences with standard licenses: {0}'.format(subset_sum)
     return subset_sum
 
 #----------------------------
@@ -229,6 +239,21 @@ def get_number_of_occ_where_notific_unknown(data):
     return subset_sum
 
 #----------------------------
+# Output methods
+#----------------------------
+def dataframe_to_markdown(df, indexname):
+    header_line = '|' + indexname + '|' + '|'.join(df.columns) + '|'
+    sep_list = []
+    for i in range(len(df.columns) + 1):
+        sep_list.append('----')
+    sep_line = '|' + '|'.join(sep_list) + '|'
+    data_lines = []
+    for rowname in df.index:
+        line = '|' + rowname + '|' + '|'.join([str(df[x][rowname]) for x in df.columns]) + '|'
+        data_lines.append(line)
+    return '\n'.join([header_line, sep_line] + data_lines)
+
+#----------------------------
 # Wrapper methods
 #----------------------------
 def analyse_parameters_per_dataset(data):
@@ -351,56 +376,36 @@ def analyse_parameters_per_occurrence(data):
     ]
     return results_json
 
-#----------------------------
-# Methods for printing html
-#----------------------------
-def get_html_header():
-    return """
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="../lib/d3.v3.min.js"></script>
-    <script src="../lib/novus-nvd3-764767a/nv.d3.min.js"></script>
-    <link href="../lib/novus-nvd3-764767a/src/nv.d3.css" rel="stylesheet" type="text/css">
-    <script src="../lib/novus-nvd3-764767a/src/utils.js"></script>
-    <script src="../lib/novus-nvd3-764767a/src/models/pie.js"></script>
-    """
+def analyse_std_license(data, std_licenses_data):
+    joined_data = pd.merge(data, std_licenses_data, how='left', left_on='standard license', right_on='url')
+    agg = joined_data.groupby('code')
+    occurrences_with_std_licenses = agg['numberOfOccurrences'].sum()
+    datasets_with_std_licenses = agg.size()
+    index = occurrences_with_std_licenses.index
+    table = pd.DataFrame({'# of datasets': datasets_with_std_licenses, '# of records': occurrences_with_std_licenses}, index=index)
+    total_oc = get_total_nr_of_occurrences(data)
+    total_nr_ds = get_total_nr_of_datasets(data)
+    nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
+    nr_oc_no_lic = nr_of_occurrences_with_no_license(data)
+    nr_oc_no_std_lic = total_oc - nr_oc_std_lic - nr_oc_no_lic
+    nr_ds_std_lic = get_nr_of_datasets_with_standard_license(data)
+    nr_ds_no_lic = get_nr_of_datasets_with_no_license(data)
+    nr_ds_no_std_lic = total_nr_ds - nr_ds_std_lic - nr_ds_no_lic
+    no_license_row = pd.DataFrame({'# of datasets': nr_ds_no_lic, '# of records': nr_oc_no_lic}, index=['no license'])
+    no_std_license_row = pd.DataFrame({'# of datasets': nr_ds_no_std_lic, '# of records': nr_oc_no_std_lic}, index=['no standard license'])
+    outtable = pd.concat([table, no_license_row, no_std_license_row])
+    outtable['% of occurrence records'] = outtable['# of records'] / float(total_oc)
+    return dataframe_to_markdown(outtable, 'License')
 
-def generate_bar_chart_html(chart_title, categories, chart_data, plotnr):
-    index_html = '<div id="container{0}" style="width:100%; height: 400px;"></div>'.format(plotnr)
-    chart_js_code = '<script>$(function() {{$("#container{0}").highcharts({{chart: {{type: "bar", plotBorderWidth: 6}}, title: {{text: "{1}" }}, xAxis: {{categories: {2}}}, yAxis: {{title: {{text: "Number of occurrences"}} }}, series: {3} }});}});</script>'.format(plotnr, chart_title, categories, chart_data)
-    return index_html + chart_js_code
-
-def generate_pie_chart_html(chart_title, chart_data, plotnr):
-    index_html =  '<svg id="container{0}" style="width:60%; height: 400px;"></svg>\n'.format(plotnr)
-    chart_js_code = """<script>
-    nv.addGraph(function() {{
-	var chart = nv.models.pieChart()
-	.x(function(d) {{return d.label }})
-	.y(function(d) {{return d.value }})
-	.showLabels(true);
-
-	d3.select("#container{1}")
-	.datum(exampleData())
-	.transition()
-	.duration(1200)
-	.call(chart);
-
-	return chart;
-    }} );
-
-    function exampleData() {{
-	return {0};
-    }}
-    </script>
-    """.format(chart_data, plotnr)
-    return index_html + chart_js_code
 
 #----------------------------
 # Main method
 #----------------------------
 
 def main():
-    infile_annotated_datasets, infile_annotated_datasets_gbif_dua = sys.argv[1:]
+    infile_annotated_datasets, infile_annotated_datasets_gbif_dua, std_license_doc = sys.argv[1:]
     data = get_data(infile_annotated_datasets)
+    std_licenses_data = get_data(std_license_doc)
     total_oc = get_total_nr_of_occurrences(data)
     nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
     nr_oc_no_std_lic = total_oc - nr_oc_std_lic
@@ -438,5 +443,8 @@ def main():
     outfile = open('charts/data/parameters-per-occurrence-gbif-dua.json', 'w+')
     outfile.write(json.dumps(analysis_json))
     outfile.close()
+
+    std_license_data = analyse_std_license(data, std_licenses_data)
+    print std_license_data
 
 main()
