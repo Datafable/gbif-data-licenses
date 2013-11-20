@@ -409,42 +409,29 @@ def main():
     total_oc = get_total_nr_of_occurrences(data)
     nr_oc_std_lic = nr_of_occurrences_with_standard_license(data)
     nr_oc_no_std_lic = total_oc - nr_oc_std_lic
-    license_data = [{'label': 'Standard license', 'value': int(nr_oc_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_oc_no_std_lic), 'color': '#CCCCCC'}]
-    outfile = open('charts/data/standard-license-occurrences.json', 'w+')
-    outfile.write(json.dumps(license_data))
-    outfile.close()
+    std_lic_occ_data = [{'label': 'Standard license', 'value': int(nr_oc_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_oc_no_std_lic), 'color': '#CCCCCC'}]
 
     total_nr_ds = get_total_nr_of_datasets(data)
     nr_ds_std_lic = get_nr_of_datasets_with_standard_license(data)
     nr_ds_no_std_lic = total_nr_ds - nr_ds_std_lic
-    license_data = [{'label': 'Standard license', 'value': int(nr_ds_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_ds_no_std_lic), 'color': '#CCCCCC'}]
-    outfile = open('charts/data/standard-license-datasets.json', 'w+')
-    outfile.write(json.dumps(license_data))
+    std_lic_dataset_data = [{'label': 'Standard license', 'value': int(nr_ds_std_lic), 'color': '#27AE60'}, {'label': 'Non-standard license', 'value': int(nr_ds_no_std_lic), 'color': '#CCCCCC'}]
+
+    param_ds_data = analyse_parameters_per_dataset(data)
+    param_occ_data = analyse_parameters_per_occurrence(data)
+    data_dua = get_data(infile_annotated_datasets_gbif_dua)
+    param_ds_dua_data = analyse_parameters_per_dataset(data_dua)
+    param_occ_dua_data = analyse_parameters_per_occurrence(data_dua)
+
+    outfile = open('charts/js/data.js', 'w+')
+    outfile.write('var std_license_occ_data = {0};\n\n'.format(json.dumps(std_lic_occ_data)))
+    outfile.write('var std_license_ds_data = {0};\n\n'.format(json.dumps(std_lic_dataset_data)))
+    outfile.write('var params_ds_data = {0};\n\n'.format(json.dumps(param_ds_data)))
+    outfile.write('var params_occ_data = {0};\n\n'.format(json.dumps(param_occ_data)))
+    outfile.write('var params_ds_dua_data = {0};\n\n'.format(json.dumps(param_ds_dua_data)))
+    outfile.write('var params_occ_dua_data = {0};\n\n'.format(json.dumps(param_occ_dua_data)))
     outfile.close()
 
-    analysis_json = analyse_parameters_per_dataset(data)
-    outfile = open('charts/data/parameters-per-dataset.json', 'w+')
-    outfile.write(json.dumps(analysis_json))
-    outfile.close()
-
-    analysis_json = analyse_parameters_per_occurrence(data)
-    outfile = open('charts/data/parameters-per-occurrence.json', 'w+')
-    outfile.write(json.dumps(analysis_json))
-    outfile.close()
-
-    data = get_data(infile_annotated_datasets_gbif_dua)
-
-    analysis_json = analyse_parameters_per_dataset(data)
-    outfile = open('charts/data/parameters-per-dataset-gbif-dua.json', 'w+')
-    outfile.write(json.dumps(analysis_json))
-    outfile.close()
-
-    analysis_json = analyse_parameters_per_occurrence(data)
-    outfile = open('charts/data/parameters-per-occurrence-gbif-dua.json', 'w+')
-    outfile.write(json.dumps(analysis_json))
-    outfile.close()
-
-    std_license_data = analyse_std_license(data, std_licenses_data)
+    std_license_data = analyse_std_license(data_dua, std_licenses_data)
     print std_license_data
 
 main()
