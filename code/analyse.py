@@ -373,22 +373,22 @@ def generate_pie_chart_html(chart_title, chart_data, plotnr):
     index_html =  '<svg id="container{0}" style="width:60%; height: 400px;"></svg>\n'.format(plotnr)
     chart_js_code = """<script>
     nv.addGraph(function() {{
-	var chart = nv.models.pieChart()
-	.x(function(d) {{return d.label }})
-	.y(function(d) {{return d.value }})
-	.showLabels(true);
+    var chart = nv.models.pieChart()
+    .x(function(d) {{return d.label }})
+    .y(function(d) {{return d.value }})
+    .showLabels(true);
 
-	d3.select("#container{1}")
-	.datum(exampleData())
-	.transition()
-	.duration(1200)
-	.call(chart);
+    d3.select("#container{1}")
+    .datum(exampleData())
+    .transition()
+    .duration(1200)
+    .call(chart);
 
-	return chart;
+    return chart;
     }} );
 
     function exampleData() {{
-	return {0};
+    return {0};
     }}
     </script>
     """.format(chart_data, plotnr)
