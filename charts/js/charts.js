@@ -1,23 +1,11 @@
 // Add charts to HTML
 
-d3.json("data/standard-license-datasets.json", function (data) {
-    addPieChart("#chart1","Datasets",data);
-});
-d3.json("data/standard-license-occurrences.json", function (data) {
-    addPieChart("#chart2","Occurrences",data);
-});
-d3.json("data/parameters-per-dataset.json", function (data) {
-    addMultiHorizontalBarChart("#chart3","Datasets",data);
-});
-d3.json("data/parameters-per-occurrence.json", function(data) {
-    addMultiHorizontalBarChart("#chart4","Occurrences",data);
-});
-d3.json("data/parameters-per-dataset-gbif-dua.json", function(data) {
-    addMultiHorizontalBarChart("#chart5","Datasets",data);
-});
-d3.json("data/parameters-per-occurrence-gbif-dua.json", function(data) {
-    addMultiHorizontalBarChart("#chart6","Occurrences",data);
-});
+addPieChart("#chart1","Datasets",std_license_ds_data);
+addPieChart("#chart2","Occurrences",std_license_occ_data);
+addMultiHorizontalBarChart("#chart3","Datasets",params_ds_data);
+addMultiHorizontalBarChart("#chart4","Occurrences",params_occ_data);
+addMultiHorizontalBarChart("#chart5","Datasets",params_ds_dua_data);
+addMultiHorizontalBarChart("#chart6","Occurrences",params_occ_dua_data);
 
 // Functions
 
