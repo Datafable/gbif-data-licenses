@@ -1,4 +1,8 @@
 key,owningOrganizationKey,numberOfOccurrences,rights,standard license,use,distribution,derivatives,commercial,attribution,share alike,notification
+fdbbb939-ee0b-4c6e-8eb3-15ed92177306,0c23482f-89f3-4efa-b6ed-7b25dadde4fc,0,,,true,true,true,?,true,?,false
+e0459621-92c2-40ac-9934-72b3b1384dc3,456058db-f70b-4005-97ad-e08570cf0c56,0,,,true,true,true,?,true,?,false
+ca35c47e-4099-4f1e-bb7b-db70e7300dd3,c4c9ac9e-8d6b-4047-99aa-40e0bd8e8720,0,,,true,true,true,?,true,?,false
+eabb3ebc-e394-4737-97d9-1e93f30cf906,a30d7f59-d3d4-4e89-97dc-de9cf837f591,0,,,true,true,true,?,true,?,false
 d46b37d6-c4d1-4bb9-abbf-5f8a16f45c04,610414e0-8040-11d9-8294-b8a03c50a862,0,,,true,true,true,?,true,?,false
 feb769dd-6096-4b25-8a69-9ece3a9e4b66,610414e0-8040-11d9-8294-b8a03c50a862,0,,,true,true,true,?,true,?,false
 bf750dad-8c2c-4988-9f89-dc113d51c434,610414e0-8040-11d9-8294-b8a03c50a862,0,,,true,true,true,?,true,?,false
@@ -36,22 +40,18 @@ ada2bac0-efad-47f2-b4df-8c0d2b7ed881,07f617d0-c688-11d8-bf62-b8a03c50a862,0,,,tr
 565330ef-3937-4eb3-9bf9-561918394f0c,07f617d0-c688-11d8-bf62-b8a03c50a862,0,,,true,true,true,?,true,?,false
 0e2d604a-0ba5-4ed9-ae7a-31ceac2aa1fb,07f617d0-c688-11d8-bf62-b8a03c50a862,0,,,true,true,true,?,true,?,false
 b23f9eb6-2585-4cb5-85c5-5ba39040838f,07f617d0-c688-11d8-bf62-b8a03c50a862,0,,,true,true,true,?,true,?,false
-9850b85a-793f-429d-a437-2d5b46282acf,dc282b9d-8f3b-4197-b174-ba5272721a6f,0,,,true,true,true,?,true,?,false
+9850b85a-793f-429d-a437-2d5b46282acf,dc282b9d-8f3b-4197-b174-ba5272721a6f,413272,Este trabajo está bajo una licencia Creative Commons Zero (CC0) 1.0  http://creativecommons.org/publicdomain/zero/1.0/legalcode,http://creativecommons.org/publicdomain/zero/1.0/,true,true,true,true,false,false,false
 3caf2aad-a970-4905-872c-b4cd014f48bd,80c3ad34-82b5-457d-bb9b-1d6e1b84fae6,0,,,true,true,true,?,true,?,false
-21934821-38c4-496f-a17b-e8dafd29eabf,3059a14b-7b43-41ce-beef-873999911dfe,0,,,true,true,true,?,true,?,false
-2f58500b-b776-4fe6-b2b9-cbb32e8cd615,e3837372-dfa4-450c-af2f-ce7a91ce135c,0,,,true,true,true,?,true,?,false
-eed1e6a2-7fb3-4519-bcf1-47b9fb9fa223,a2f1c6f5-88de-4fc5-891a-336259f32f4e,0,,,true,true,true,?,true,?,false
-59bf2c83-1e3c-40c8-9437-39ce3d3d462c,88dc5c67-b496-4dec-a361-3deee558a552,0,,,true,true,true,?,true,?,false
-01c5963f-25c7-4361-8ee8-30f6a6ff98e4,85be57ed-f187-49c9-b7ff-eaa622e06217,0,,,true,true,true,?,true,?,false
-db6cd9d7-7be5-4cd0-8b3c-fb6dd7446472,4b4b2111-ee51-45f5-bf5e-f535f4a1c9dc,0,,,true,true,true,?,true,?,false
-05d46db0-71db-42c0-b5cb-b81120093f1d,bd79995f-0fc1-4ce8-a6e6-8eb75be35e7d,0,,,true,true,true,?,true,?,false
+21934821-38c4-496f-a17b-e8dafd29eabf,3059a14b-7b43-41ce-beef-873999911dfe,409,,,true,true,true,?,true,?,false
+2f58500b-b776-4fe6-b2b9-cbb32e8cd615,e3837372-dfa4-450c-af2f-ce7a91ce135c,766,,,true,true,true,?,true,?,false
+59bf2c83-1e3c-40c8-9437-39ce3d3d462c,88dc5c67-b496-4dec-a361-3deee558a552,200,,,true,true,true,?,true,?,false
+db6cd9d7-7be5-4cd0-8b3c-fb6dd7446472,4b4b2111-ee51-45f5-bf5e-f535f4a1c9dc,7920,,,true,true,true,?,true,?,false
+05d46db0-71db-42c0-b5cb-b81120093f1d,bd79995f-0fc1-4ce8-a6e6-8eb75be35e7d,3509,,,true,true,true,?,true,?,false
 29886bf9-62d2-4208-87f6-109dd1972607,2a7e3080-28a9-11dd-97cd-b8a03c50a862,0,,,true,true,true,?,true,?,false
-f3f10afc-257f-47ef-8b0c-4bcaebdc09dc,85be57ed-f187-49c9-b7ff-eaa622e06217,0,,,true,true,true,?,true,?,false
-2c28a663-db16-48d3-9cd0-3c7ec8d8d873,46fec380-8e1d-11dd-8679-b8a03c50a862,0,,,true,true,true,?,true,?,false
-a639542a-654a-427b-9cf1-bde1953bbb52,46fec380-8e1d-11dd-8679-b8a03c50a862,0,,,true,true,true,?,true,?,false
+2c28a663-db16-48d3-9cd0-3c7ec8d8d873,46fec380-8e1d-11dd-8679-b8a03c50a862,88018,,,true,true,true,?,true,?,false
+a639542a-654a-427b-9cf1-bde1953bbb52,46fec380-8e1d-11dd-8679-b8a03c50a862,84986,,,true,true,true,?,true,?,false
 5a659248-1f70-11e3-b2c5-00145eb45e9a,23539a57-1347-4dd3-af2a-cf9478563baa,0,The use of the data is allowed only for non-profit scientific use and for non-profit nature conservation purpose.,,true,true,true,false,false,?,false
-6c808b65-184a-4ec2-a658-d55d5e1f9ba5,fb10a11f-4417-41c8-be6a-13a5c8535122,0,,,true,true,true,?,true,?,false
-90e99b1e-6ae4-4577-9679-ba4603e24f5c,85be57ed-f187-49c9-b7ff-eaa622e06217,0,,,true,true,true,?,true,?,false
+6c808b65-184a-4ec2-a658-d55d5e1f9ba5,fb10a11f-4417-41c8-be6a-13a5c8535122,849,,,true,true,true,?,true,?,false
 76cc7230-76b6-4763-9caf-22626b29c0a6,1cd669d0-80ea-11de-a9d0-f1765f95f18b,0,,,true,true,true,?,true,?,false
 96e5a2f0-d008-4136-955c-83cd139b23c6,85be57ed-f187-49c9-b7ff-eaa622e06217,624,"Esta [Chiropteros en el Parque Natural Regional El Vínculo y su zona de amortiguación (Buga, Valle del Cauca)] se hace disponible bajo la licencia Open Data Commons Attribution: http://www.opendatacommons.org/licenses/by/1.0/",http://opendatacommons.org/licenses/by/1.0/,true,true,true,true,true,false,false
 e70580b8-b1df-4566-9a33-b32f30aab526,46fec380-8e1d-11dd-8679-b8a03c50a862,80784,,,true,true,true,?,true,?,false
@@ -173,7 +173,7 @@ b7dbce69-0de2-4e80-81d8-0783dfc6f126,07f617d0-c688-11d8-bf62-b8a03c50a862,65,,,t
 d5230299-ed41-46d4-a6ee-6d431d2d157b,07f617d0-c688-11d8-bf62-b8a03c50a862,35,,,true,true,true,?,true,?,false
 75e787b4-14c4-4040-9bd8-477d343e3a91,a6de8f30-d931-11db-973c-b8a03c50a862,3784,,,true,true,true,?,true,?,false
 8ea44a78-c6af-11e2-9b88-00145eb45e9a,021121c0-f040-11d8-b22f-b8a03c50a862,15411,,,true,true,true,?,true,?,false
-e242f598-69f3-4dbf-b4f6-d2a1c5f6986b,6ba9a8cc-513a-4a51-bf93-6f5de8040a96,150706,,,true,true,true,?,true,?,false
+e242f598-69f3-4dbf-b4f6-d2a1c5f6986b,6ba9a8cc-513a-4a51-bf93-6f5de8040a96,152646,,,true,true,true,?,true,?,false
 d8774f09-ebd8-451c-b133-41e4500981d9,37e82b90-1e21-11de-ab90-f72009d2669b,0,This IHSM pelagicdiversity database is made available under the Open Data Commons Attribution License: http://www.opendatacommons.org/licenses/by/1.0/,http://opendatacommons.org/licenses/by/1.0/,true,true,true,true,true,false,false
 55d3f041-5cd7-45cf-99e0-80cddfd035d7,7a079928-aee9-418a-b083-6152d01c78d6,6884,"El Herbario CDMB- Jardín Botánico se encuentra a cargo de una entidad pública, Corporación de Defensa de la Meseta de Bucaramanga CDMB, por lo tanto toda la información contenida en las colecciones biológicas de Herbario, plantas vivas y colección de Insectos, puede ser consultada por toda la comunidad dando los créditos correspondientes a la entidad.",,true,true,true,true,true,?,false
 09bbd7cb-afe7-4c98-a2a9-1f1081a82d19,a2f1c6f5-88de-4fc5-891a-336259f32f4e,279,Este trabajo está bajo una licencia Creative Commons Zero (CC0) 1.0  http://creativecommons.org/publicdomain/zero/1.0/legalcode,http://creativecommons.org/publicdomain/zero/1.0/,true,true,true,true,false,false,false
@@ -338,8 +338,8 @@ dc70aa06-ada2-11e2-8fbc-00145eb45e9a,10980920-6dad-11da-ad13-b8a03c50a862,5746,,
 d8ea9662-ada2-11e2-8fbc-00145eb45e9a,10980920-6dad-11da-ad13-b8a03c50a862,12872,,,true,true,true,?,true,?,false
 d0884974-ada2-11e2-8fbc-00145eb45e9a,10980920-6dad-11da-ad13-b8a03c50a862,276,,,true,true,true,?,true,?,false
 cdaf4a2c-ada2-11e2-8fbc-00145eb45e9a,10980920-6dad-11da-ad13-b8a03c50a862,1694,,,true,true,true,?,true,?,false
-8a91ff89-2dcc-4cfc-a4fb-a8ab97f28102,45a451cf-a94a-4df0-9511-1dca805a97db,640,This work is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/,http://opendatacommons.org/licenses/odbl/1.0/|http://opendatacommons.org/licenses/dbcl/1.0/,true,true,true,true,?,?,false
-75b24085-7b34-49dc-a49f-f1b007ab04d9,eb13847f-3699-4a6a-a7ab-65c133e6185b,219,This work is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/,http://opendatacommons.org/licenses/odbl/1.0/|http://opendatacommons.org/licenses/dbcl/1.0/,true,true,true,true,?,?,false
+8a91ff89-2dcc-4cfc-a4fb-a8ab97f28102,45a451cf-a94a-4df0-9511-1dca805a97db,640,This work is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/,http://opendatacommons.org/licenses/odbl/1.0/|http://opendatacommons.org/licenses/dbcl/1.0/,true,true,true,true,true,true,false
+75b24085-7b34-49dc-a49f-f1b007ab04d9,eb13847f-3699-4a6a-a7ab-65c133e6185b,219,This work is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/,http://opendatacommons.org/licenses/odbl/1.0/|http://opendatacommons.org/licenses/dbcl/1.0/,true,true,true,true,true,true,false
 6d2cfc0a-9903-40b8-802b-403398218e4a,6ea87510-0561-11d8-b851-b8a03c50a862,128006,"UMMZ data records may be used by individual researchers or research groups, but they may not be repackaged, resold, or redistributed in any form without the express written consent of a curator or collection manager of the Mammal Division of the University of Michigan Museum of Zoology. If any of these records are used in an analysis or report, the provenance of the original data must be acknowledged and the UMMZ notified. The University of Michigan and its staff are not responsible for damages, injury or loss due to the use of these data.",,true,false,false,?,true,?,true
 89df1c06-1f0f-432a-bae7-c495837317c6,fb10a11f-4417-41c8-be6a-13a5c8535122,0,,,true,true,true,?,true,?,false
 4a837446-cdcd-411b-8d51-5b8184890bcc,1f55bd0a-6ebe-49a1-8a9c-9258702b6f46,724,Data from this dataset may be used and shared freely when the creators of the data are attributed correctly,,true,true,true,true,true,?,false
@@ -418,7 +418,7 @@ b4545f26-7c9a-4e0c-a0d6-4946ee127a29,1928bdf0-f5d2-11dc-8c12-b8a03c50a862,54373,
 1df39810-9b90-4ed3-b013-b0b21dbd7703,610414e0-8040-11d9-8294-b8a03c50a862,372,,,true,true,true,?,true,?,false
 645a34cb-0d74-42b7-b7e8-f170c4c20b76,610414e0-8040-11d9-8294-b8a03c50a862,396,,,true,true,true,?,true,?,false
 d7c78847-d662-44c4-a550-5a812dbcc71b,6c4a0bb0-2a4d-11d8-aa2d-b8a03c50a862,27476,,,true,true,true,?,true,?,false
-317fd0a9-1bcf-4e94-bc3c-a685c4693c10,6c4a0bb0-2a4d-11d8-aa2d-b8a03c50a862,378,,,true,true,true,?,true,?,false
+317fd0a9-1bcf-4e94-bc3c-a685c4693c10,d019904b-e7ac-4262-96bb-4b9d215d3386,378,,,true,true,true,?,true,?,false
 4704d25f-7944-4c1b-89bb-ed4a2007085b,8700fabb-30e5-44b1-9daa-67b5a3cb22d2,453,,,true,true,true,?,true,?,false
 93082fdb-1a18-40de-a25c-5d1b594a370d,6c4a0bb0-2a4d-11d8-aa2d-b8a03c50a862,3125,,,true,true,true,?,true,?,false
 5c4a1973-2b2f-4c32-a9c8-65150ef4cf13,60f8ce17-065e-40ff-bac6-4f85f5edaedd,131622,,,true,true,true,?,true,?,false
@@ -1171,7 +1171,7 @@ fe95dd88-c8dc-4e09-804e-c36dd22de761,07f617d0-c688-11d8-bf62-b8a03c50a862,1567,,
 02b3bdaa-07dc-45b3-a761-7580d4bdcdb4,07f617d0-c688-11d8-bf62-b8a03c50a862,139,,,true,true,true,?,true,?,false
 039c8737-cad1-406b-aaf0-a390d018a95a,fd0038d0-3e7b-11d9-8439-b8a03c50a862,0,CC-BY,http://creativecommons.org/licenses/by/3.0/,true,true,true,true,true,false,false
 e605458e-0106-414b-87d1-69669726db09,bb922300-7ddb-11de-a300-90ac77aa923f,20,,,true,true,true,?,true,?,false
-3233d48b-d3a7-486b-a32e-75cb9e113e7b,bb922300-7ddb-11de-a300-90ac77aa923f,5,This [DATA(BASE)-NAME] is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/,http://opendatacommons.org/licenses/odbl/1.0/|http://opendatacommons.org/licenses/dbcl/1.0/,true,true,true,true,?,?,false
+3233d48b-d3a7-486b-a32e-75cb9e113e7b,bb922300-7ddb-11de-a300-90ac77aa923f,5,This [DATA(BASE)-NAME] is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/,http://opendatacommons.org/licenses/odbl/1.0/|http://opendatacommons.org/licenses/dbcl/1.0/,true,true,true,true,true,true,false
 458acc40-a815-4fa3-859b-66c84e324907,07f617d0-c688-11d8-bf62-b8a03c50a862,396314,,,true,true,true,?,true,?,false
 91c4bb90-3608-47e6-9757-361a4a7728f5,07f617d0-c688-11d8-bf62-b8a03c50a862,337366,,,true,true,true,?,true,?,false
 832fa9ed-1aa9-47dd-9cba-6a58d91b8a12,07f617d0-c688-11d8-bf62-b8a03c50a862,311876,,,true,true,true,?,true,?,false
@@ -3491,7 +3491,7 @@ e17d9bdc-dc88-401a-bb10-6ef560448480,417c3159-419c-4325-a257-c482371860c6,50682,
 5d2edbd0-6091-11de-a447-b8a03c50a862,6b4fc310-4452-11de-87a1-b8a03c50a862,1224,,,true,true,true,?,true,?,false
 5e36a0a0-b6e4-11dd-81f6-b8a03c50a862,396d5f30-dea9-11db-8ab4-b8a03c50a862,61468,RMNH_AVES_PASSERIFORMES version 2007-05-02 Contact Hein van Grouw for use of this data.,,false,false,false,false,?,?,?
 5f501df0-0c61-11dd-84ce-b8a03c50a862,4c415e40-1e21-11de-9e40-a0d6ecebb8bf,17447,,,true,true,true,?,true,?,false
-610f5cf0-13c7-11de-b2e0-b8a03c50a862,63c6de50-9274-11da-8901-b8a03c50a862,19070,,,true,true,true,?,true,?,false
+610f5cf0-13c7-11de-b2e0-b8a03c50a862,63c6de50-9274-11da-8901-b8a03c50a862,19451,,,true,true,true,?,true,?,false
 6197c830-d9c7-11de-b793-b8a03c50a862,2e4af590-37d0-11d9-8439-b8a03c50a862,36101,,,true,true,true,?,true,?,false
 62f49c30-925e-11da-8900-b8a03c50a862,41cce8a0-925e-11da-8900-b8a03c50a862,709,,,true,true,true,?,true,?,false
 63d72e90-c7b8-11de-b279-ef4016664769,d2b97690-bfd6-11de-b279-d52977ace833,79186,"Copyright 2013, National Biodiversity Data Centre, Waterford, Ireland. The information is free to use by individuals provided the owners of the data are acknowledged in any use of publication, or that the use of the data is cited in the following format - 'Data from the All Ireland Non-Marine Molluscan Database dataset held by the National Biodiversity Data Centre www.biodiversityireland.ie, [insert date]'",,true,true,true,true,true,?,false
@@ -3671,7 +3671,7 @@ f4ae0140-9fcc-11da-a90c-b8a03c50a862,e147be40-75eb-11d9-b257-b8a03c50a862,4318,,
 f507fe60-30b1-11de-b170-b8a03c50a862,97a3ce10-3e54-11d9-8439-b8a03c50a862,10271,,,true,true,true,?,true,?,false
 f6f1d320-d9cd-11de-b793-b8a03c50a862,16fd28c4-e4be-40e5-a551-139e573cfe68,8330,Please contact Dr. G.M. Dirkse gerard.dirkse@natuurmuseum.nl before use of the data in electronic files or printed publications.,,?,?,?,?,?,?,?
 f76bfff0-17a0-11de-9d16-b8a03c50a862,218534d0-925e-11da-8900-b8a03c50a862,4567,,,true,true,true,?,true,?,false
-f7b77040-0c64-11dd-84d1-b8a03c50a862,4c415e40-1e21-11de-9e40-a0d6ecebb8bf,24340,,,true,true,true,?,true,?,false
+f7b77040-0c64-11dd-84d1-b8a03c50a862,6ba9a8cc-513a-4a51-bf93-6f5de8040a96,24340,,,true,true,true,?,true,?,false
 f7c496b0-9300-11da-8596-b8a03c50a862,f7259790-9300-11da-8596-b8a03c50a862,50834,,,true,true,true,?,true,?,false
 f7ee7340-0350-11de-9138-b8a03c50a862,4c415e40-1e21-11de-9e40-a0d6ecebb8bf,205,,,true,true,true,?,true,?,false
 f9261370-af9d-11db-ad75-b8a03c50a862,218534d0-925e-11da-8900-b8a03c50a862,44561,,,true,true,true,?,true,?,false
@@ -11542,7 +11542,6 @@ ff03d870-9168-11db-9f6c-b8a03c50a862,218534d0-925e-11da-8900-b8a03c50a862,4333,,
 83880886-f762-11e1-a439-00145eb45e9a,3059a14b-7b43-41ce-beef-873999911dfe,1599,,,true,true,true,?,true,?,false
 83893c4c-f762-11e1-a439-00145eb45e9a,4e1a0487-456b-4620-bab9-fa0e44ece156,750,,,true,true,true,?,true,?,false
 838a6ba8-f762-11e1-a439-00145eb45e9a,9c56586d-d2c7-4eac-9cc9-436e6b8b1a54,88302,"Ni el Instituto Universitario CIBIO ni sus miembros se responsabilizan de la exactitud, fiabilidad y grado de cobertura de los datos, ni del uso que se les pueda dar. Se prohíbe el uso comercial de los datos obtenidos sin el consentimiento explícito del Instituto Universitario CIBIO. Queda estrictamente prohibido la edición, reproducción, redistribución, adición o reducción total o parcial de la información, incluida explícitamente su incorporación a otras bases de datos de acceso libre o restringido. El uso de los datos conlleva la obligación de reconocer y citar su uso explícitamente. Esta atribución se debe mantener en cualquier uso subsecuente de los datos. El usuario se compromete a que la información obtenida no sea utilizada en detrimento de la conservación de la flora y fauna, ni en procesos que alteren irreversiblemente el equilibrio ecológico (extracción indiscriminada o introducción de especies). Los datos de biodiversidad constatan generalmente presencias; es decir, la falta de datos de una especie en un punto no implica que no se encuentre ahí. El muestreo biológico es normalmente irregular, incompleto e influido por factores ajenos al objeto de muestreo. Es fundamental tomar en cuenta este extremo para un uso apropiado de los datos. El Instituto Universitario CIBIO se reserva el derecho de actual legalmente contra los infractores de estas condiciones de uso. No responsibility by the CIBIO Universitary Institut and their members of the accuracy, reliability, or completeness of the data or information provided data is accepted for uses or misuses. Use of the data for commercial or for-profit applications are permitted only via written permission from the CIBIO Universitary Institut. Data are provided to users, but should not be passed on to third parties or redistributed. It is explicitly forbidden to incorporate these data into other databases of free or restricted access. The data use implies explicit acknowledgment which should be kept with any subsequent use of the data. Data are provided under the understanding that their use will be generally consistent with the philosophy of not causing detriment to wild species and ecosystem balance. Biodiversity data generally constitute positive information only; that is, absence of a record does not always mean absence of a particular species from particular point in space and time. Because biodiversity sampling is notoriously spotty, biased, and incomplete, understanding the positive-only nature of the data is critical to their proper use. The CIBIO Universitary Institut reserves the right to pursue legal actions against those infringing these conditions of use.",,true,false,false,false,true,?,false
-838bb5ee-f762-11e1-a439-00145eb45e9a,0e0fc0f0-828e-11d8-b7ed-b8a03c50a862,173038,"Request for Acknowledgment: EMAP requests that all individuals who download EMAP data acknowledge the source of these data in any reports, papers, or presentations. If you use these data, please include a statement similar to ""Some or all of the data described in this article were produced by the U.S. Environmental Protection Agency through its Environmental Monitoring and Assessment Program (EMAP), http://www.epa.gov/emap/.",,true,true,true,true,true,?,false
 838cf80a-f762-11e1-a439-00145eb45e9a,0e0fc0f0-828e-11d8-b7ed-b8a03c50a862,367092,,,true,true,true,?,true,?,false
 838e2626-f762-11e1-a439-00145eb45e9a,0e0fc0f0-828e-11d8-b7ed-b8a03c50a862,1279056,http://www.nodc.noaa.gov/General/datacom_form.html,,?,?,?,?,?,?,?
 838f42d6-f762-11e1-a439-00145eb45e9a,0e0fc0f0-828e-11d8-b7ed-b8a03c50a862,18632,"Users must agree to cite the original data provider (shown under the ""source"" field) for all data they present or publish. Data may not be used for commercial purposes. Karen Stocks, the San Diego Supercomputer Center, and the University of California San Diego are not responsible for errors in the data.",,true,true,true,false,true,?,false
@@ -11924,7 +11923,6 @@ ff03d870-9168-11db-9f6c-b8a03c50a862,218534d0-925e-11da-8900-b8a03c50a862,4333,,
 85a347c0-f762-11e1-a439-00145eb45e9a,b9c5f740-34d9-11de-baf5-e00d96b185ef,37641,,,true,true,true,?,true,?,false
 85a214d6-f762-11e1-a439-00145eb45e9a,32ceedc0-bafb-11d9-8e53-b8a03c50a862,56002,,,true,true,true,?,true,?,false
 859fe27e-f762-11e1-a439-00145eb45e9a,0f727d00-b29a-11da-94a7-b8a03c50a862,2483,,,true,true,true,?,true,?,false
-859ecdee-f762-11e1-a439-00145eb45e9a,63c6de50-9274-11da-8901-b8a03c50a862,5815,,,true,true,true,?,true,?,false
 859d978a-f762-11e1-a439-00145eb45e9a,463555b0-d081-11da-ae8f-b8a03c50a862,703,The copyright for any material created by the DSMZ is reserved. The duplication or use of information and data such as texts or images is only permitted with the indication of the source or with prior approval by the DSMZ.,,true,true,true,true,true,?,false
 859c6946-f762-11e1-a439-00145eb45e9a,d48116e0-281e-11d9-8436-b8a03c50a862,34251,,,true,true,true,?,true,?,false
 859b45fc-f762-11e1-a439-00145eb45e9a,24266ce0-38be-11d9-8439-b8a03c50a862,10949,No part of this data base may be copied or reproduced without written permission from the legal owner.,,false,false,false,false,?,?,?
