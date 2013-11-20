@@ -18,3 +18,6 @@ analysis: code/analyse.py data/generated/datasets-annotated.csv data/generated/d
 
 test: 
 	rm data/generated/*
+
+all: analysis
+	echo "run all rules"
