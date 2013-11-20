@@ -15,3 +15,9 @@ data/generated/datasets-annotated-gbif-dua.csv: data/generated/datasets.csv data
 
 analysis: code/analyse.py data/generated/datasets-annotated.csv data/generated/datasets-annotated-gbif-dua.csv
 	./code/analyse.py data/generated/datasets-annotated.csv data/generated/datasets-annotated-gbif-dua.csv
+
+clean: 
+	rm data/generated/*
+
+all: analysis
+	echo "run all rules"
