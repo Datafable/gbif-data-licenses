@@ -1,5 +1,7 @@
 body {
     font-family: "Lucida grande", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
     margin: 2em;
 }
 .chart {
