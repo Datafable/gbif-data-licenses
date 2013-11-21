@@ -2,24 +2,9 @@
 
 The licenses are interpreted only by using the information provided in the `rights` field of the dataset metadata. If a link is provided, the linked document is also used in the interpretation. No contact is made with the data publisher or owner.
 
-## License parameters
-
-The licenses are interpreted using the following parameters, which can be set to `true`, `false` or `?` (= unclear). These parameters are not entirely independent from each other:
-
-    - (is a) standard license
-    - (data) use (allowed) 
-        ↳ (re)distribution (allowed)
-        ↳ (creating) derivatives (allowed)
-        ↳ commercial (use allowed)
-        ↳ attribution (required)
-        ↳ share alike (required)
-    - notification (required)
-
-Some licenses are too unclear to set those parameters (see last section).
+*Note: All examples below are actual licenses.*
 
 ## Standard license
-
-### True
 
 The license is interpreted as a standard license ([Creative Commons](http://creativecommons.org/licenses/) or [Open Data Commons](http://opendatacommons.org/licenses/)) if a link to such license is provided or if the license name or abbreviation is used.
 
@@ -28,13 +13,40 @@ The license is interpreted as a standard license ([Creative Commons](http://crea
 > * cc-by-nc-nd
 > * The Tree of Life Project owns the copyright for the ToL Tree Structure XML File. This file is made available to the public under the terms of the Attribution-NonCommercial Creative Commons License. This license allows people to copy, modify, and redistribute the ToL tree structure, subject to some restrictions.
 
-### False
+For those standard licenses, the standard URL of the license is provided. If the license mentions a specific version or region, the corresponding URL is provided, otherwise the URL of the current version is provided.
 
-All other licenses.
+rights | standard license
+--- | ---
+CC-BY | [http://creativecommons.org/licenses/by/3.0/](http://creativecommons.org/licenses/by/3.0/)
+Tall Timbers data is governed by the Creative Commons Attribution 3.0 license (http://creativecommons.org/licenses/by/3.0/legalcode). Any use of data or images must be attributed to Tall Timbers Research Station and Land Conservancy. | [http://creativecommons.org/licenses/by/3.0/](http://creativecommons.org/licenses/by/3.0/)
+Data supplied is licensed under the Creative Commons Attribution 3.0 Australia License. | [http://creativecommons.org/licenses/by/3.0/au/](http://creativecommons.org/licenses/by/3.0/au/)
+Tela Botanica a choisi de publier par défaut son contenu sous licence libre Creative Commons (by-sa) afin d'en faciliter la divulgation : http://creativecommons.org/licenses/by-sa/2.0/fr/ | [http://creativecommons.org/licenses/by-sa/2.0/fr/](http://creativecommons.org/licenses/by-sa/2.0/fr/)
 
-### Unclear
+## License characteristics
 
-n/a
+The licenses are interpreted using the following parameters, which can be set to `true`, `false`, or `?` (= unclear). These parameters are not entirely independent from each other:
+
+    - use
+        ↳ (re)distribution
+        ↳ derivatives
+        ↳ commercial (use)
+        ↳ attribution
+        ↳ share alike
+    - notification
+
+Some licenses are too unclear to set those parameters (see last section).
+
+For the analysis and [charts](http://datafable.com/gbif-data-licenses/charts/index.html), those parameters are interpreted as:
+
+parameter | open | restricted/required | unclear
+--- | --- | --- | --- 
+use | true | false | ?
+distribution | true | false | ?
+derivatives | true | false | ?
+commercial | true | false | ?
+attribution | false | true | ?
+share alike | false | true | ?
+notification | false | true | ?
 
 ## Use
 
