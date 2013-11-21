@@ -26,13 +26,13 @@ Tela Botanica a choisi de publier par défaut son contenu sous licence libre Cre
 
 The licenses are interpreted using the following parameters, which can be set to `true`, `false`, or `?` (= unclear). These parameters are not entirely independent from each other:
 
-    - use                 → true = data use allowed 
-        ↳ distribution   → true = redistribution allowed
-        ↳ derivatives    → true = creating derivatives allowed
-        ↳ commercial     → true = commercial use allowed
-        ↳ attribution    → true = attribution required
-        ↳ share alike    → true = share alike required
-    - notification        → true = notification required
+    - use
+        ↳ (re)distribution
+        ↳ derivatives
+        ↳ commercial (use)
+        ↳ attribution
+        ↳ share alike
+    - notification
 
 Some licenses are too unclear to set those parameters (see last section).
 
