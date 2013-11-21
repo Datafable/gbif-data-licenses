@@ -16,10 +16,17 @@ We want to get an overview of the characteristics of the licenses used in all GB
 1. Metadata of all datasets is obtained via the [GBIF Registry API](http://www.gbif.org/developer/registry) and written to [datasets.csv](data/generated/datasets.csv). `make data/generated/datasets.csv`
 2. All unique licenses are written to [licenses.csv](data/licenses.csv). Rerunning the scripts will append newly found licenses to the file. `make data/licenses.csv`
 3. The [characteristics of the licenses](data/licenses.csv) are manually interpreted using [these guidelines](guidelines.md).
-4. The annotated information is merged with the [datasets](data/generated/datasets-annotated.csv). `make data/generated/datasets-annotated.csv`
+4. The annotated information is merged with the [datasets](data/generated/datasets-annotated.csv)†. `make data/generated/datasets-annotated.csv`
 5. These data are analyzed. `make analysis`
 6. The results are written to [standard-license-data.csv](data/generated/standard-license-data.csv) and [data.js](charts/js/data.js).
 7. The latter is used as the basis for [charts](charts/), which are [displayed](http://datafable.com/gbif-data-licenses/charts/index.html) from the `gh-pages` branch.
+
+† You can easily transform the UUID keys to working URLs as follows:
+
+* `"http://www.gbif.org/dataset/" & key`: [http://www.gbif.org/dataset/66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2](http://www.gbif.org/dataset/66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2)
+* `"http://www.gbif.org/publisher/" & owningOrganizationKey`: [http://www.gbif.org/publisher/1989b627-2a61-44db-83e4-392efc5da0a9](http://www.gbif.org/publisher/1989b627-2a61-44db-83e4-392efc5da0a9)
+ 
+ 
 
 ## Requirements
 
