@@ -434,7 +434,7 @@ def analyse_std_license(data, std_licenses_data):
 #----------------------------
 
 def main():
-    infile_annotated_datasets, infile_annotated_datasets_gbif_dua, std_license_doc = sys.argv[1:]
+    infile_annotated_datasets, std_license_doc = sys.argv[1:]
     data = get_data(infile_annotated_datasets)
     std_licenses_data = get_data(std_license_doc)
     total_oc = get_total_nr_of_occurrences(data)
@@ -449,20 +449,15 @@ def main():
 
     param_ds_data = analyse_parameters_per_dataset(data)
     param_occ_data = analyse_parameters_per_occurrence(data)
-    data_dua = get_data(infile_annotated_datasets_gbif_dua)
-    param_ds_dua_data = analyse_parameters_per_dataset(data_dua)
-    param_occ_dua_data = analyse_parameters_per_occurrence(data_dua)
 
     outfile = open('charts/js/data.js', 'w+')
     outfile.write('var std_license_occ_data = {0};\n\n'.format(json.dumps(std_lic_occ_data)))
     outfile.write('var std_license_ds_data = {0};\n\n'.format(json.dumps(std_lic_dataset_data)))
     outfile.write('var params_ds_data = {0};\n\n'.format(json.dumps(param_ds_data)))
     outfile.write('var params_occ_data = {0};\n\n'.format(json.dumps(param_occ_data)))
-    outfile.write('var params_ds_dua_data = {0};\n\n'.format(json.dumps(param_ds_dua_data)))
-    outfile.write('var params_occ_dua_data = {0};\n\n'.format(json.dumps(param_occ_dua_data)))
     outfile.close()
 
-    std_license_data = analyse_std_license(data_dua, std_licenses_data)
+    std_license_data = analyse_std_license(data, std_licenses_data)
     print std_license_data
 
 main()
