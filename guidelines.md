@@ -2,7 +2,7 @@
 
 The licenses are interpreted only by using the information provided in the `rights` field of the dataset metadata. If a link is provided, the linked document is also used in the interpretation. No contact is made with the data publisher or owner.
 
-All examples below are licenses used.
+*Note: All examples below are actual licenses.*
 
 ## Standard license
 
@@ -26,17 +26,17 @@ Tela Botanica a choisi de publier par défaut son contenu sous licence libre Cre
 
 The licenses are interpreted using the following parameters, which can be set to `true`, `false`, or `?` (= unclear). These parameters are not entirely independent from each other:
 
-    - use               → true = data use allowed 
-        ↳ distribution  → true = redistribution allowed
-        ↳ derivatives   → true = creating derivatives allowed
-        ↳ commercial    → true = commercial use allowed
-        ↳ attribution   → true = attribution required
-        ↳ share alike   → true = share alike required
-    - notification      → true = notification required
+    - use                 → true = data use allowed 
+        ↳ distribution   → true = redistribution allowed
+        ↳ derivatives    → true = creating derivatives allowed
+        ↳ commercial     → true = commercial use allowed
+        ↳ attribution    → true = attribution required
+        ↳ share alike    → true = share alike required
+    - notification        → true = notification required
 
 Some licenses are too unclear to set those parameters (see last section).
 
-For the analysis and [charts](http://datafable.com/gbif-data-analysis/charts/index.html), those parameters are interpreted as:
+For the analysis and [charts](http://datafable.com/gbif-data-licenses/charts/index.html), those parameters are interpreted as:
 
 parameter | open | restricted/required | unclear
 --- | --- | --- | --- 
