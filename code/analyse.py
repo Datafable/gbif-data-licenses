@@ -427,7 +427,7 @@ def analyse_std_license(data, std_licenses_data):
     no_std_license_row = pd.DataFrame({'# of datasets': nr_ds_no_std_lic, '# of records': nr_oc_no_std_lic}, index=['no standard license'])
     outtable = pd.concat([table, no_license_row, no_std_license_row])
     outtable['% of occurrence records'] = outtable['# of records'] / float(total_oc)
-    return dataframe_to_markdown(outtable, 'License')
+    return outtable
 
 #----------------------------
 # Main method
@@ -458,6 +458,8 @@ def main():
     outfile.close()
 
     std_license_data = analyse_std_license(data, std_licenses_data)
-    print std_license_data
+    f = open('data/generated/standard-license-data.csv', 'w+')
+    std_license_data.to_csv(f, sep=',', header=True, index=True, index_label='License', float_format='%.6f')
+    f.close()
 
 main()
