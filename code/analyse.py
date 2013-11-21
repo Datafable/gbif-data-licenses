@@ -286,8 +286,8 @@ def analyse_parameters_per_dataset(data):
     nr_ds_notific_unknown = get_number_of_datasets_where_notific_unknown(data)
 
     color_ds_ok = '#27AE60'
-    color_ds_notok = '#CCCCCC'
-    color_ds_unknown = '#C0392B'
+    color_ds_notok = '#C0392B'
+    color_ds_unknown = '#CCCCCC'
 
     label_ds_ok = 'Open'
     label_ds_notok = 'Restricted/Required'
@@ -362,8 +362,8 @@ def analyse_parameters_per_occurrence(data):
     nr_occ_notific_unknown = get_number_of_occ_where_notific_unknown(data)
 
     color_occ_ok = '#27AE60'
-    color_occ_notok = '#CCCCCC'
-    color_occ_unknown = '#C0392B'
+    color_occ_notok = '#C0392B'
+    color_occ_unknown = '#CCCCCC'
 
     label_occ_ok = 'Open'
     label_occ_notok = 'Restricted/Required'
