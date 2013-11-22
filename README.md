@@ -20,6 +20,7 @@ We want to get an overview of the characteristics of the licenses used in all GB
 5. These data are analyzed. `make analysis`
 6. The results are written to [standard-license-data.csv](data/generated/standard-license-data.csv) and [data.js](charts/js/data.js).
 7. The latter is used as the basis for [charts](charts/), which are [displayed](http://datafable.com/gbif-data-licenses/charts/index.html) from the `gh-pages` branch.
+8. The results of the analysis were presented in [this blog post](http://peterdesmet.com/posts/analyzing-gbif-data-licenses.html).
 
 † You can easily transform the UUID keys to working URLs as follows:
 
