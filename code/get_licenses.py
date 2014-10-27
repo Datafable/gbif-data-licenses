@@ -10,7 +10,7 @@ def parse_dataset_metadata(dataset):
         rights = rights.replace("\n", "")
     else:
         rights = ''
-    return [dataset['key'].encode('utf-8'), dataset['owningOrganizationKey'].encode('utf-8'), rights]
+    return [dataset['key'].encode('utf-8'), dataset['publishingOrganizationKey'].encode('utf-8'), rights]
 
 def get_gbif_datasets(limit, offset):
     params = {'limit': limit, 'offset': offset}
@@ -32,7 +32,7 @@ all_datasets = []
 more_results_to_find = True
 offset = 0
 limit = 20
-print 'key,owningOrganizationKey,numberOfOccurrences,rights'
+print 'key,publishingOrganizationKey,numberOfOccurrences,rights'
 csvwriter = csv.writer(sys.stdout, lineterminator='\n')
 
 while more_results_to_find:
