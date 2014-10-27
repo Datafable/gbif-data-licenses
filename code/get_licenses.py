@@ -14,13 +14,13 @@ def parse_dataset_metadata(dataset):
 
 def get_gbif_datasets(limit, offset):
     params = {'limit': limit, 'offset': offset}
-    r = requests.get('http://api.gbif.org/v0.9/dataset/', params=params)
+    r = requests.get('http://api.gbif.org/v1/dataset/', params=params)
     request_result = r.json()['results']
     return request_result
 
 def getOccurrences(key):
     params = {'datasetKey':  key}
-    r = requests.get('http://api.gbif.org/v0.9/occurrence/count', params=params)
+    r = requests.get('http://api.gbif.org/v1/occurrence/count', params=params)
     try:
         count = r.json()
     except:
