@@ -1,0 +1,29 @@
+body {
+    font-family: "Lucida grande", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 2em;
+}
+.chart {
+        display: block;
+        height: 300px;
+        width: 100%;
+    }
+    .chart text {
+        font-family: inherit;
+    }
+    .chart .title {
+        font-weight: bold;
+    }
+
+.clearfix {
+    *zoom: 1; /* For IE 6/7 only: include this rule to trigger hasLayout and contain floats. */
+    }
+    .clearfix:before,
+    .clearfix:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    .clearfix:after {
+        clear: both;
+    }

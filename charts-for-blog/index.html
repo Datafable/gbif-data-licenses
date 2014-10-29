@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>GBIF data licenses - Charts</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/nv.d3.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/charts.js"></script>
+    <link href="css/nv.d3.min.css" rel="stylesheet" type="text/css">
+    <link href="css/charts.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>GBIF data licenses - Charts</h1>
+    <p>Charts for the <a href="https://github.com/Datafable/gbif-data-licenses">analysis of the licenses</a> of all <a href="http://www.gbif.org">GBIF</a> registered datasets. These charts are not updated automatically (see the timestamp on the last commit for the <a href="https://github.com/Datafable/gbif-data-licenses/tree/gh-pages">gh-pages branch</a>), but you can run the analysis yourself by forking <a href="https://github.com/Datafable/gbif-data-licenses">the repository</a>.</p>
+
+    <h2>Standard license vs non-standard license</h2>
+    <div class="clearfix">
+        <svg id="chart1" class="chart" style="float:left; width: 50%;"></svg>
+        <svg id="chart2" class="chart" style="float:left; width: 50%;"></svg>
+    </div>
+
+    <h2>License characteristics</h2>
+    <h3>Datasets</h3>
+    <div><svg id="chart3" class="chart"></svg></div>
+    
+    <h3>Occurrences</h3>
+    <div><svg id="chart4" class="chart"></svg></div>
+
+</body>
+</html>
