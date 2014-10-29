@@ -10,17 +10,17 @@ def parse_dataset_metadata(dataset):
         rights = rights.replace("\n", "")
     else:
         rights = ''
-    return [dataset['key'].encode('utf-8'), dataset['owningOrganizationKey'].encode('utf-8'), rights]
+    return [dataset['key'].encode('utf-8'), dataset['publishingOrganizationKey'].encode('utf-8'), rights]
 
 def get_gbif_datasets(limit, offset):
     params = {'limit': limit, 'offset': offset}
-    r = requests.get('http://api.gbif.org/v0.9/dataset/', params=params)
+    r = requests.get('http://api.gbif.org/v1/dataset/', params=params)
     request_result = r.json()['results']
     return request_result
 
 def getOccurrences(key):
     params = {'datasetKey':  key}
-    r = requests.get('http://api.gbif.org/v0.9/occurrence/count', params=params)
+    r = requests.get('http://api.gbif.org/v1/occurrence/count', params=params)
     try:
         count = r.json()
     except:
@@ -32,7 +32,7 @@ all_datasets = []
 more_results_to_find = True
 offset = 0
 limit = 20
-print 'key,owningOrganizationKey,numberOfOccurrences,rights'
+print 'key,publishingOrganizationKey,numberOfOccurrences,rights'
 csvwriter = csv.writer(sys.stdout, lineterminator='\n')
 
 while more_results_to_find:

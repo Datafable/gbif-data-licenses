@@ -35,5 +35,6 @@ We want to get an overview of the characteristics of the licenses used in all GB
 * Python
 * requests
 * pandas
+* simplejson
 * [d3](https://github.com/mbostock/d3): visualization JS library ([license](https://github.com/mbostock/d3/blob/master/LICENSE))
 * [nvd3](https://github.com/novus/nvd3): charts JS Library ([license](https://github.com/novus/nvd3/blob/master/LICENSE.md)) - included

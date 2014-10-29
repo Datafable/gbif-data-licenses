@@ -243,7 +243,7 @@ Notification is interpreted as unclear if contact is required, either because th
 
 ## License unclear
 
-If the license is unclear for any of the reasons below, then all field are set to `?` except for `standard license` which is set to `false`.
+If the license is unclear for any of the reasons below, then all field are set to `?` except for `standard license` which is left empty.
 
 The license is not indicated or the link to the license is broken.
 
