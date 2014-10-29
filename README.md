@@ -26,8 +26,6 @@ We want to get an overview of the characteristics of the licenses used in all GB
 
 * `"http://www.gbif.org/dataset/" & key`: [http://www.gbif.org/dataset/66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2](http://www.gbif.org/dataset/66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2)
 * `"http://www.gbif.org/publisher/" & owningOrganizationKey`: [http://www.gbif.org/publisher/1989b627-2a61-44db-83e4-392efc5da0a9](http://www.gbif.org/publisher/1989b627-2a61-44db-83e4-392efc5da0a9)
- 
- 
 
 ## Requirements
 
