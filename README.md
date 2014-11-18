@@ -29,10 +29,29 @@ We want to get an overview of the characteristics of the licenses used in all GB
 
 ## Requirements
 
+These are the requirements for running the analysis:
+
 * Unix make
 * Python
 * requests
 * pandas
 * simplejson
+
+These are the libraries used for the charts:
+
 * [d3](https://github.com/mbostock/d3): visualization JS library ([license](https://github.com/mbostock/d3/blob/master/LICENSE))
 * [nvd3](https://github.com/novus/nvd3): charts JS Library ([license](https://github.com/novus/nvd3/blob/master/LICENSE.md)) - included
+
+## Disclaimer
+
+This work (especially the manual interpretation of the licenses) is subject to error. We hope to mitigate this by opening up our workflow in this repository (such as [our guidelines](guidelines.md)), but we disclaim any liability for all uses of this work. As new and updated datasets are published to GBIF all the time, our [list of datasets](data/generated/datasets.csv) (gets replaced with each analysis) and [licenses](data/licenses.csv) (new licenses are added with each analysis) will be outdated. Verify the last commit timestamp for these files to see how recent they are.
+
+## License
+
+[LICENSE](LICENSE)
+
+## Preferred citation
+
+Want to use this work in a scholarly publication? You can cite this repository as:
+
+> Desmet P, Aelterman B (2013) Interpreting licenses of GBIF registered data. https://github.com/Datafable/gbif-data-licenses (Accessed on yyyy-mm-dd)
