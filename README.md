@@ -54,4 +54,4 @@ This work (especially the manual interpretation of the licenses) is subject to e
 
 Want to use this work in a scholarly publication? You can cite this repository as:
 
-> Desmet P, Aelterman B (2013) Interpreting licenses of GBIF registered data. https://github.com/Datafable/gbif-data-licenses (Accessed on yyyy-mm-dd)
+> Desmet P, Aelterman B (2013) Interpreting licenses of GBIF registered data. https://github.com/Datafable/gbif-data-licenses (accessed yyyy-mm-dd)
