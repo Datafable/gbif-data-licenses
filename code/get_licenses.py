@@ -36,7 +36,7 @@ print 'key,publishingOrganizationKey,numberOfOccurrences,rights'
 csvwriter = csv.writer(sys.stdout, lineterminator='\n')
 
 while more_results_to_find:
-    #sys.stderr.write('LOG: calling GBIF')
+    sys.stderr.write('LOG: calling GBIF\n')
     datasets = get_gbif_datasets(limit, offset)
     all_datasets += datasets
     offset += 20
