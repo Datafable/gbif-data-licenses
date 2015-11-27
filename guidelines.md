@@ -2,7 +2,7 @@
 
 The licenses are interpreted only by using the information provided in the `rights` field of the dataset metadata. If a link is provided, the linked document is also used in the interpretation. No contact is made with the data publisher or owner.
 
-*Note: All examples below are actual licenses.*
+*Note: All examples below are actual provided licenses.*
 
 ## Standard license
 
