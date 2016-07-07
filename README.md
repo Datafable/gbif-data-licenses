@@ -1,5 +1,7 @@
 # GBIF data licenses
 
+[![DOI](https://zenodo.org/badge/6828/Datafable/gbif-data-licenses.svg)](https://zenodo.org/badge/latestdoi/6828/Datafable/gbif-data-licenses)
+
 ## Rationale
 
 Data publishers of the [Global Biodiversity Information Facility](http://www.gbif.org) (GBIF) apply a wide range of licenses to their datasets. This is [problematic](http://peterdesmet.com/posts/illegal-bullfrogs.html):
