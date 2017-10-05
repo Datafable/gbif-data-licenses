@@ -1,6 +1,6 @@
 # GBIF data licenses
 
-[![DOI](https://zenodo.org/badge/6828/Datafable/gbif-data-licenses.svg)](https://zenodo.org/badge/latestdoi/6828/Datafable/gbif-data-licenses)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.592870.svg)](https://doi.org/10.5281/zenodo.592870)
 
 ## Rationale
 
